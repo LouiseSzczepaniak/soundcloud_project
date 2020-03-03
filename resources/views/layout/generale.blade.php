@@ -7,6 +7,7 @@
         <link type="text/css" rel="stylesheet" href="/css/style.css"/>
     </head>
 <p>coucou test</p>
+    <p>coucou test2</p>
     <body>
         <header>
             <nav class="menu_principal">
