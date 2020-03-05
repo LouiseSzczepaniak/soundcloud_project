@@ -1,0 +1,183 @@
+@font-face {
+    font-family: "coolvetica";
+    src: url("/fonts/coolvetica/coolvetica rg.ttf");
+}
+
+@font-face {
+    font-family: "gravity";
+    src: url("/fonts/gravity/Gravity-Regular.otf");
+}
+
+body{
+    margin: 0;
+}
+
+
+/* Sur toutes les pages */
+
+.menu_principal{
+    font-family: 'coolvetica';
+    background-color: #475069;
+    list-style-type: none;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 0;
+    font-size: 25px;
+}
+
+.menu_principal a{
+    text-decoration: none;
+    color: white;
+}
+
+body{
+    background-color: #c3cee1;
+}
+
+/* Pop up connexion / deconnexion */
+.modal{
+    display: flex;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    z-index: 222;
+}
+
+
+/* Page accueil */
+.ensemble_musics{
+    font-family: "gravity";
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.music{
+    margin: 20px;
+}
+
+.titre_musique{
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.titre_section{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.style_musique{
+    margin-bottom: 0;
+}
+
+.psn_upload{
+    margin-top: 0;
+}
+
+.style_musique, .psn_upload{
+    text-align: center;
+    color: #475069;
+}
+
+.psn_upload a{
+    text-decoration: none;
+    color: #393539;
+}
+
+.psn_upload a:hover{
+    color: #ebf0f7;
+}
+
+.banniere_accueil{
+    background-image: url("/img/banniere_accueil.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 800px;
+    height: 100vh;
+    position: relative;
+}
+
+.nouvelle_chanson{
+    text-decoration: none;
+    color: white;
+    background-color: #475069;
+    padding: 10px 50px;
+    border-radius: 20px;
+    position: absolute;
+    font-size: 30px;
+    margin-top: 500px;
+    margin-left: 1000px;
+}
+
+.banniere_ou{
+    position: absolute;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: white;
+    margin-top: 400px;
+    margin-left: 900px;
+}
+
+#searchform{
+    position: absolute;
+    margin-top: 200px;
+}
+
+.formulaire_recherche{
+    width: 60%;
+    border-radius: 20px;
+    border: none;
+    padding: 10px 15px;
+    margin-left: 750px;
+    margin-top: 90px;
+    font-size: 30px;
+}
+
+/* Page search */
+.resultat_search{
+    margin-top: 200px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.resultat_psn{
+    text-align: center;
+}
+
+.resultat_psn div{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.name_search{
+    text-decoration: none;
+    color: #475069;
+    font-weight: bold;
+}
+
+.name_search:hover{
+    color: #ebf0f7;
+}
+
+.infos_psn_search{
+    display: flex;
+    justify-content: space-around;
+}
+
+.resultat_chansons{
+    margin-top: 50px;
+}
+
+.resultat_chansons h3{
+    text-align: center;
+}
