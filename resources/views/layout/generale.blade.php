@@ -6,14 +6,13 @@
         <title> Listen and cloud </title>
         <link type="text/css" rel="stylesheet" href="/css/style.css"/>
     </head>
-<p>coucou test</p>
-    <p>coucou test2</p>
+
     <body>
         <header>
             <nav class="menu_principal">
                 <li>
                     <a href="/">
-                        <img src="/img/logo.png" alt="logo_menu"/>
+                        <div class="logo"></div>
                     </a>
                 </li>
                 @guest
@@ -21,7 +20,7 @@
                 @else
                     <li>
                         <a href="/utilisateur/{{Auth::user()->id}}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                {{ Auth::user()->name }} <span class="caret"></span>
+                            {{ Auth::user()->name }} <span class="caret"></span>
                         </a>
                     </li>
 
@@ -34,6 +33,7 @@
                         </form>
                     </li>
                 @endguest
+                <div class="login"></div>
             </nav>
         </header>
 
@@ -51,7 +51,10 @@
         </div>
 
         <div id="main">
-            @yield('contenu')
+            <div class="background-img">
+                @yield('contenu')
+            </div>
+
         </div>
 
         <audio id="audio" controls>
