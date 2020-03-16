@@ -10,6 +10,9 @@
 
 body{
     margin: 0;
+    font-family: gravity;
+    overflow-x: hidden;
+    background-color: #c3cee1;
 }
 
 
@@ -19,7 +22,7 @@ body{
     font-family: 'coolvetica';
     background-color: #475069;
     list-style-type: none;
-    height: 100px;
+    height: 10vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -32,18 +35,37 @@ body{
     color: white;
 }
 
-body{
-    background-color: #c3cee1;
+.logo{
+    background-image: url('../img/logo2.png');
+    width: 8vw;
+    height: 8vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    left: 3vw;
+    top: 1vh;
 }
-
 /* Pop up connexion / deconnexion */
 .modal{
-    display: flex;
+    display: none;
     width: 50%;
     margin-left: auto;
     margin-right: auto;
     position: absolute;
     z-index: 222;
+}
+
+.login{
+    background-image: url('../img/login.png');
+    position: absolute;
+    right: 2vw;
+    top: 2vh;
+    width: 5vw;
+    height: 5vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 
@@ -72,6 +94,7 @@ body{
     width: 70%;
     margin-left: auto;
     margin-right: auto;
+    font-size: 1.8em;
 }
 
 .style_musique{
@@ -100,9 +123,11 @@ body{
     background-image: url("/img/banniere_accueil.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 800px;
-    height: 100vh;
-    position: relative;
+    background-position: center;
+    height: 24vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .nouvelle_chanson{
@@ -111,10 +136,7 @@ body{
     background-color: #475069;
     padding: 10px 50px;
     border-radius: 20px;
-    position: absolute;
     font-size: 30px;
-    margin-top: 500px;
-    margin-left: 1000px;
 }
 
 .banniere_ou{
@@ -122,23 +144,15 @@ body{
     font-size: 30px;
     text-transform: uppercase;
     color: white;
-    margin-top: 400px;
-    margin-left: 900px;
-}
-
-#searchform{
-    position: absolute;
-    margin-top: 200px;
+    margin-top: 10px;
 }
 
 .formulaire_recherche{
-    width: 60%;
+    width: 120%;
     border-radius: 20px;
     border: none;
     padding: 10px 15px;
-    margin-left: 750px;
-    margin-top: 90px;
-    font-size: 30px;
+    font-size: 1.7em;
 }
 
 /* Page search */
@@ -181,3 +195,117 @@ body{
 .resultat_chansons h3{
     text-align: center;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Louise */
