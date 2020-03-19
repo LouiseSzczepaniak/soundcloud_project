@@ -22,6 +22,8 @@ Route::post('/chanson/create', 'FirstController@creerchanson')->middleware('auth
 
 Route::get('/suivre/{id}', 'FirstController@suivre')->where('id', '[0-9]+')->middleware('auth');
 
+Route::get('/playlists/{id}', 'FirstController@playlists')->where('id', '[0-9]+');
+
 Route::get('/search/{s}', 'FirstController@search');
 
 Auth::routes();
