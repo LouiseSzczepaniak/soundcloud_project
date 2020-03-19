@@ -1,4 +1,3 @@
-
 @extends('layout.generale')
 @section('contenu')
     <h2> La page perso de {{$utilisateur->name}}</h2>
