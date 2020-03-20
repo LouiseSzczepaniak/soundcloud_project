@@ -18,6 +18,8 @@
         <li> Il suit {{$utilisateur->jeLesSuit()->count()}} personnes </li>
         <li> Il est suivi par {{$utilisateur->ilsMeSuivent()->count()}} personnes </li>
     </ul>
+
     @include('FirstController._chansons', ["chansons" => $utilisateur->chansons])
+
 @endsection
 
