@@ -21,5 +21,16 @@
 
     @include('FirstController._chansons', ["chansons" => $utilisateur->chansons])
 
+    <h1>Les playlists</h1>
+    @foreach($utilisateur->playlists as $p)
+        {{$p->name}}
+    @endforeach
+
+    <h1>Les chansons des playlists</h1>
+    @foreach($utilisateur->playlists as $p)
+        @include('FirstController._chansons', ["chansons" => $p->chansons])
+
+    @endforeach
+
 @endsection
 

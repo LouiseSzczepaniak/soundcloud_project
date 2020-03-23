@@ -18,7 +18,7 @@ class CreateChansonTable extends Migration
             $table->string('url');
             $table->string('nom');
             $table->string('style');
-            $table->int('user_id');
+            $table->integer('user_id');
             $table->timestamps();
         });
     }

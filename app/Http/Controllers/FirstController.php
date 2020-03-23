@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Chanson;
-use App\Playlists;
+use App\Playlist;
 use App\Playlists_chanson;
 use App\User;
 use Illuminate\Http\Request;
@@ -26,21 +26,17 @@ class FirstController extends Controller
 
     public function utilisateur($id){
         $u = User::findOrFail($id);
-        $p = Playlists::all();
-        foreach($p->chansons as $c){
-            echo $c->name;
-        }
 
-        return view('FirstController.utilisateur', ['utilisateur'=>$u], ['playlists' =>$p]);
+        return view('FirstController.utilisateur', ['utilisateur'=>$u]);
     }
 
     public function playlists($id){
-        $playlists = Playlists::findOrFail($id);
+        $playlists = Playlist::findOrFail($id);
         return view('FirstController.playlists', ['playlists' => $playlists]);
     }
 
     public function afficheplaylists($id){
-        $playlists = Playlists::findOrFail($id);
+        $playlists = Playlist::findOrFail($id);
         return view('FirstController.utilisateur', ['playlists' => $playlists]);
     }
 

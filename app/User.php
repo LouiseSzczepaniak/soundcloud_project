@@ -38,7 +38,7 @@ class User extends Authenticatable
     ];
 
     public function playlists(){
-        return $this->hasMany("App\Playlists", "user_id");
+        return $this->hasMany("App\Playlist", "user_id");
     }
 
     public function jeLesSuit(){
