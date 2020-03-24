@@ -1,7 +1,8 @@
 
 @extends('layout.generale')
 @section('contenu')
-    <h2> La page perso de {{$utilisateur->name}}</h2>
+<div class="utilisateur">
+   <div class="page_user"> <h1 class="pseudo"> {{$utilisateur->name}}</h1>
 
     @auth
             @if(Auth::id() != $utilisateur->id)
@@ -12,13 +13,20 @@
                 @endif
             @endif
     @endauth
-
-    <ul>
-        <li> {{$utilisateur->chansons()->count()}} chansons uploadées </li>
+            <div><input type="button" class="suivre" value="Suivre"/></div>
+            <div> <strong>{{$utilisateur->jeLesSuit()->count()}}</strong> abonnements</div>
+            <div> <strong>{{$utilisateur->ilsMeSuivent()->count()}}</strong> abonnés</div>
+         <div><strong>{{$utilisateur->chansons()->count()}}</strong> chansons uploadées</div>
         <!-- parenthèses permettent de ne pas tout charger -->
-        <li> Il suit {{$utilisateur->jeLesSuit()->count()}} personnes </li>
-        <li> Il est suivi par {{$utilisateur->ilsMeSuivent()->count()}} personnes </li>
-    </ul>
+         
+        
+    
+    
+</div>
+
+<div class="user_music_playlist">
     @include('FirstController._chansons', ["chansons" => $utilisateur->chansons])
+</div>
+</div>
 @endsection
 

@@ -27,3 +27,5 @@ Route::get('/search/{s}', 'FirstController@search');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/like/{id}', 'FirstController@like')->where ('id','[0-9]+')->middleware('auth');

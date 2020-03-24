@@ -37,6 +37,7 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    
     public function jeLesSuit(){
         return $this->belongsToMany("App\User", "connexion", "suiveur_id", "suivi_id");
     }
@@ -48,4 +49,10 @@ class User extends Authenticatable
     public function chansons(){
         return $this->hasMany("App\Chanson", "user_id");
     }
+
+    public function jeLike() {
+        return $this->belongsToMany("App\User", "likes", "id_user", "id_chanson");
+    }
+
+
 }

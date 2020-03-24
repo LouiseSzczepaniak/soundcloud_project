@@ -1,4 +1,6 @@
-<h3 class="titre_section"> Les musiques récemment uplodées </h3>
+
+<h3 class="titre_section"> Les musiques récemment uploadées </h3>
+<div class="soulignement"></div>
 <div class="ensemble_musics">
 @foreach($chansons as $c)
     <div class="music">
@@ -11,6 +13,15 @@
             <a href="/utilisateur/{{$c->utilisateur->id}}"> {{$c->utilisateur->name}}
             </a>
         </p>
+        @auth
+        
+        
+        <a href="/like/{{$c->id}}"><div class="like"></div></a>
+
+        
+       
+        
+        @endauth
     </div>
 @endforeach
 </div>
