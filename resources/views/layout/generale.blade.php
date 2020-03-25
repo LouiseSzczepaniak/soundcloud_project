@@ -3,37 +3,33 @@
 <head>
     <meta charset='UTF-8'>
     <meta name="csrf-token" content="{{ csrf_token() }}" />
-    <title> Listen and cloud </title>
+    <title> LISTEN & UPLOAD </title>
     <link type="text/css" rel="stylesheet" href="/css/style.css"/>
 </head>
 
 <body>
 <header>
     <nav class="menu_principal">
-        <li>
-            <a href="/">
-                <div class="logo"></div>
-            </a>
-        </li>
+        <a href="/">
+            <div class="logo"></div>
+        </a>
         @guest
-
+        <div class="login"></div>
         @else
-            <li>
+            <div class="icons">
                 <a href="/utilisateur/{{Auth::user()->id}}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                    {{ Auth::user()->name }} <span class="caret"></span>
+                    {{ Auth::user()->name }} <div class="myaccount"></div> <span class="caret"></span>
                 </a>
-            </li>
 
-            <li>
                 <a href="{{ route('logout') }}"
                    onclick="event.preventDefault();
-                                              document.getElementById('logout-form').submit();"> Déconnexion </a>
+                                              document.getElementById('logout-form').submit();"> <div class="logout"></div> </a>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                     @csrf
                 </form>
-            </li>
+            </div>
         @endguest
-        <div class="login"></div>
+      <!--  <div class="login"></div>-->
     </nav>
 </header>
 
