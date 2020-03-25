@@ -26,7 +26,6 @@ class FirstController extends Controller
 
     public function utilisateur($id){
         $u = User::findOrFail($id);
-
         return view('FirstController.utilisateur', ['utilisateur'=>$u]);
     }
 
@@ -42,6 +41,11 @@ class FirstController extends Controller
 
     public function nouvellechanson(){
         return view('FirstController.nouvelle');
+    }
+
+    public function like($id) {
+        Auth::user()->jeLike()->toggle($id);
+        return redirect("/");
     }
 
     public function creerchanson(Request $request){

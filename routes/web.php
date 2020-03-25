@@ -26,6 +26,8 @@ Route::get('/playlists/{id}', 'FirstController@playlists')->where('id', '[0-9]+'
 
 Route::get('/search/{s}', 'FirstController@search');
 
+Route::get('/like/{id}', 'FirstController@like')->where('id', '[0-9]+')->middleware('auth');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
