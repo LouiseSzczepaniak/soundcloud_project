@@ -168,6 +168,8 @@ body{
     margin: auto;
 }
 
+
+
 .banniere_accueil{
     background-image: url("/img/banniere_accueil.jpg");
     background-repeat: no-repeat;
@@ -501,3 +503,12 @@ body{
 
 
 /* Louise */
+.like_hover {
+    background-image: url('../img/like_hover.svg');
+    width: 2vw;
+    height: 2vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: auto;
+}
