@@ -16,6 +16,26 @@ $(document).ready(function(){
     })
 })
 
+$("#affichPlaylists1").click(function(){
+    let etat = document.getElementById("listePlaylists1").style.display;
+    console.log(etat);
+    if(etat === "block"){
+        document.getElementById("listePlaylists1").style.display = "none";
+    } else {
+        document.getElementById("listePlaylists1").style.display = "block";
+    }
+})
+
+$(".affichPlaylists").click(function(){
+    let nb = $(this).parent('div').attr('id');
+    let etat = document.getElementById("listePlaylists"+nb).style.display;
+    if(etat === "block"){
+        document.getElementById("listePlaylists"+nb).style.display = "none";
+    } else {
+        document.getElementById("listePlaylists"+nb).style.display = "block";
+    }
+})
+
 /*Title: Cool Modal Popup Sign In/Out Form*/
 
 $(function() {
@@ -112,3 +132,4 @@ $(function() {
     e.preventDefault(); //used to prevent submission of form...remove for real use
   });
 });
+
