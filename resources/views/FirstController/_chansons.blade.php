@@ -10,13 +10,13 @@
             <a href="/utilisateur/{{$c->utilisateur->id}}"> {{$c->utilisateur->name}}
             </a>
         </p>
-
-        @if(Auth::user()->jeLike->contains($c->id))
-     <a data-pjax class="a_like" href="/like/{{$c->id}}"><div class="like"></div></a>             
-@else
-     <a data-pjax class="a_like" href="/like/{{$c->id}}"><div class="like_hover"></div></a>
-@endif
-      
+        @auth
+            @if(Auth::user()->jeLike->contains($c->id))
+                <a data-pjax class="a_like" href="/like/{{$c->id}}"><div class="like"></div></a>
+            @else
+                 <a data-pjax class="a_like" href="/like/{{$c->id}}"><div class="like_hover"></div></a>
+            @endif
+        @endauth
     </div>
 @endforeach
 </div>
