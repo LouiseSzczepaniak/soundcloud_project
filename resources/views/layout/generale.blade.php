@@ -5,6 +5,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}" />
     <title> LISTEN & UPLOAD </title>
     <link type="text/css" rel="stylesheet" href="/css/style.css"/>
+    
 </head>
 
 <body>
@@ -14,7 +15,30 @@
             <div class="logo"></div>
         </a>
         @guest
-        <a href="#modal"><div class="login"></div></a>
+        <div class="container">
+  <div class="login"></div>
+</div>
+<div class="overlay">
+</div>
+<div class="main-popup">
+  <div class="popup-header">
+    <div id="popup-close-button"><a href="#"></a></div>
+    <ul>
+      <li><a href="#" id="sign-in">sign in</a></li>
+      <li><a href="#" id="register">register</a></li>
+    </ul>
+  </div><!--.popup-header-->
+  <div class="popup-content">
+    <form action="#" class="sign-in">
+    @include('auth.login')
+    </form>
+   
+    <form action="#" class="register">
+    @include('auth.register')
+    </form>
+  </div><!--.popup-content-->
+</div><!--.main-popup-->
+       <div class="login"></div></div>
         @else
             <div class="icons">
                 <a href="/utilisateur/{{Auth::user()->id}}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -33,104 +57,20 @@
     </nav>
 </header>
 
-<div class="modal">
+
     @guest
-    <div class="remodal" data-remodal-id="modal" role="dialog" aria-labelledby="modal1Title" aria-describedby="modal1Desc">
-  <button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
-  <div>
-    <h2 id="modal1Title">Remodal</h2>
-    <p id="modal1Desc">
-      Responsive, lightweight, fast, synchronized with CSS animations, fully customizable modal window plugin
-      with declarative state notation and hash tracking.
-    </p>
-  </div>
-  <br>
-  <button data-remodal-action="cancel" class="remodal-cancel">Cancel</button>
-  <button data-remodal-action="confirm" class="remodal-confirm">OK</button>
-</div>
+    
+    
 
-<div data-remodal-id="modal2" role="dialog" aria-labelledby="modal2Title" aria-describedby="modal2Desc">
-  <div>
-    <h2 id="modal2Title">Another one window</h2>
-    <p id="modal2Desc">
-      Hello!
-    </p>
-  </div>
-  <br>
-  <button data-remodal-action="confirm" class="remodal-confirm">Hello!</button>
-</div>
-
-<!-- You can define the global options -->
-<script>
-  // window.REMODAL_GLOBALS = {
-  //   NAMESPACE: 'remodal',
-  //   DEFAULTS: {
-  //     hashTracking: true,
-  //     closeOnConfirm: true,
-  //     closeOnCancel: true,
-  //     closeOnEscape: true,
-  //     closeOnOutsideClick: true,
-  //     modifier: ''
-  //   }
-  // };
-</script>
-
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="../libs/jquery/dist/jquery.min.js"><\/script>')</script>
-<script src="../../js/app.js"></script>
-
-<!-- Events -->
-<script>
-  $(document).on('opening', '.remodal', function () {
-    console.log('opening');
-  });
-
-  $(document).on('opened', '.remodal', function () {
-    console.log('opened');
-  });
-
-  $(document).on('closing', '.remodal', function (e) {
-    console.log('closing' + (e.reason ? ', reason: ' + e.reason : ''));
-  });
-
-  $(document).on('closed', '.remodal', function (e) {
-    console.log('closed' + (e.reason ? ', reason: ' + e.reason : ''));
-  });
-
-  $(document).on('confirmation', '.remodal', function () {
-    console.log('confirmation');
-  });
-
-  $(document).on('cancellation', '.remodal', function () {
-    console.log('cancellation');
-  });
-
-//  Usage:
-//  $(function() {
-//
-//    // In this case the initialization function returns the already created instance
-//    var inst = $('[data-remodal-id=modal]').remodal();
-//
-//    inst.open();
-//    inst.close();
-//    inst.getState();
-//    inst.destroy();
-//  });
-
-  //  The second way to initialize:
-  $('[data-remodal-id=modal2]').remodal({
-    modifier: 'with-red-theme'
-  });
-</script>
-            @include('auth.login')
-        </div>
+           
+        
         @if(Route::has('register'))
             <div class="inscription">
                 @include('auth.register')
             </div>
         @endif
     @endguest
-</div>
+
 
 <div id="main">
     @yield('contenu')
@@ -142,5 +82,6 @@
 </body>
 <script src="/js/jquery.js"></script>
 <script src="/js/divers.js"></script>
-<script src="../../../js/app.js"></script>
+<script src="/js/remodal.js"></script>
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 </html>
