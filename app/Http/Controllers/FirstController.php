@@ -43,6 +43,12 @@ class FirstController extends Controller
         return view('FirstController.nouvelle');
     }
 
+    public function ajouterplaylist($chanson_id, $playlists_id){
+        $p = Playlist::find($playlists_id);
+        $p->chansons()->attach($chanson_id);
+        return back();
+    }
+
     public function like($id) {
         Auth::user()->jeLike()->toggle($id);
         return redirect("/");
@@ -83,5 +89,5 @@ class FirstController extends Controller
         Auth::user()->jeLike()->toggle($id);
         return redirect("/");
     }
-        
+
 }
