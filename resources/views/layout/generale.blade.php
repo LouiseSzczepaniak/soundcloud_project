@@ -18,7 +18,7 @@
         @else
             <div class="icons">
                 <a href="/utilisateur/{{Auth::user()->id}}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                    {{ Auth::user()->name }} <div class="myaccount"></div> <span class="caret"></span>
+                    <div class="myaccount"></div> <span class="caret"></span>
                 </a>
 
                 <a href="{{ route('logout') }}"

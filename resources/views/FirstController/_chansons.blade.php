@@ -12,7 +12,9 @@
         </p>
 
         @auth
-           <a href="/like/{{$c->id}}"><div class="like"></div></a>
+           <a href="/like/{{$c->id}}">
+               <div class="like"></div>
+           </a>
         @endauth
     </div>
 @endforeach
