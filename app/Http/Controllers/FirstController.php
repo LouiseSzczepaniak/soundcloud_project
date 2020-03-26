@@ -79,7 +79,7 @@ class FirstController extends Controller
         return view('FirstController.search', ['users'=>$users, 'chanson'=>$chanson]);
     }
 
-    public function like($id) {
+    public function jeLike($id) {
         Auth::user()->jeLike()->toggle($id);
         return redirect("/");
     }
