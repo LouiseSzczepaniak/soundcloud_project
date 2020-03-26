@@ -4,6 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
+
 class CreateLikeTable extends Migration
 {
     /**
@@ -11,6 +12,7 @@ class CreateLikeTable extends Migration
      *
      * @return void
      */
+
     public function up()
     {
         Schema::create('like', function (Blueprint $table) {
@@ -26,6 +28,7 @@ class CreateLikeTable extends Migration
      *
      * @return void
      */
+
     public function down()
     {
         Schema::dropIfExists('like');

@@ -12,8 +12,8 @@ body{
     margin: 0;
     font-family: gravity;
     overflow-x: hidden;
+    background-color: #ebf0f7;
 }
-
 
 
 /* Sur toutes les pages */
@@ -30,46 +30,31 @@ body{
     font-size: 25px;
 }
 
-.icons {
-    display:flex;
-    margin-right: 3vw;
-}
-.logo {
-    background-image: url('../img/logo2.png');
-    width:8vw;
-    height:8vh;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position:center;
-    position:absolute;
-    left:3vw;
-    top:1vh;
-}
-
-.login {
-    background-image: url('../img/login.png');
-    position:absolute;
-    right:2vw;
-    top:2vh;
-    width:5vw;
-    height:5vh;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
 .menu_principal a{
     text-decoration: none;
     color: white;
 }
 
-body{
-    background-color: #EBF0F7;
+.icons{
+    display: flex;
+    margin-right: 3vw;
+}
+
+.logo{
+    background-image: url('../img/logo2.png');
+    width: 8vw;
+    height: 8vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    left: 3vw;
+    top: 1vh;
 }
 
 /* Pop up connexion / deconnexion */
 .modal{
-    display: flex;
+    display: none;
     width: 50%;
     margin-left: auto;
     margin-right: auto;
@@ -77,22 +62,45 @@ body{
     z-index: 222;
 }
 
+.login{
+    background-image: url('../img/login.png');
+    position: absolute;
+    right: 2vw;
+    top: 2vh;
+    width: 5vw;
+    height: 5vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.logout{
+    background-image: url("../img/logout.svg");
+    width: 2.5vw;
+    height: 2.5vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.myaccount {
+    background-image: url('../img/myaccount.svg');
+    width: 2.5vw;
+    height: 2.5vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 3vw;
+}
+
 
 /* Page accueil */
-.background-img {
-    background-image: url("../img/banniere_accueil.jpg");
-    width:100vw;
-    height:100vh;
-    background-size:cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
 .ensemble_musics{
     font-family: "gravity";
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    width: 70vw;
+    width: 70%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -117,14 +125,13 @@ body{
     margin:auto;
     margin-top: 5vh;
     padding-bottom: 1vh;
-
 }
 
-.soulignement {
+.soulignement{
     width: 65vw;
     height: 1vh;
-    background:linear-gradient(to right, #8E9FBB, #C3CEE1);
-    margin:auto;
+    background: linear-gradient(to right, #8e9fbb, #c3cee1);
+    margin: auto;
 }
 
 .style_musique{
@@ -151,36 +158,6 @@ body{
     color: #ebf0f7;
 }
 
-.banniere_accueil{
-    background-image: url("/img/banniere_accueil.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 800px;
-    height: 100vh;
-    position: relative;
-}
-
-.nouvelle_chanson{
-    text-decoration: none;
-    color: white;
-    background-color: #475069;
-    padding: 10px 50px;
-    border-radius: 20px;
-    position: absolute;
-    font-size: 30px;
-    margin-top: 500px;
-    margin-left: 1000px;
-}
-
-.banniere_ou{
-    position: absolute;
-    font-size: 30px;
-    text-transform: uppercase;
-    color: white;
-    margin-top: 400px;
-    margin-left: 900px;
-}
-
 .like {
     background-image: url('../img/like.svg');
     width: 2vw;
@@ -191,40 +168,42 @@ body{
     margin: auto;
 }
 
-#searchform{
+.banniere_accueil{
+    background-image: url("/img/banniere_accueil.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 24vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nouvelle_chanson{
+    text-decoration: none;
+    color: white;
+    background-color: #475069;
+    padding: 10px 50px;
+    border-radius: 20px;
+    font-size: 30px;
+}
+
+.banniere_ou{
     position: absolute;
-    margin-top: 200px;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: white;
+    margin-top: 10px;
 }
 
 .formulaire_recherche{
-    width: 60%;
+    width: 120%;
     border-radius: 20px;
     border: none;
     padding: 10px 15px;
-    margin-left: 750px;
-    margin-top: 90px;
-    font-size: 30px;
-    outline: none;
+    font-size: 1.7em;
 }
 
-.logout {
-    background-image: url('../img/logout.svg');
-    width: 2.5vw;
-    height: 2.5vw;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.myaccount {
-    background-image: url('../img/myaccount.svg');
-    width: 2.5vw;
-    height: 2.5vw;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-right: 3vw;
-}
 /* Page search */
 .resultat_search{
     margin-top: 200px;
@@ -266,20 +245,23 @@ body{
     text-align: center;
 }
 
-/* La page utilisateur */
+
+/* Page utilisateur */
 .utilisateur {
     display:flex;
 }
+
 .page_user {
     display:flex;
+    width: 100%;
+}
+
+.infos_user{
+    display:flex;
     flex-direction: column;
-    width: 30vw;
-    height: 100vh;
     align-items: center;
-    justify-content: center;
-    font-family: "gravity";
-    color: #475069;
-    font-size: 1.5em;
+    padding: 2em;
+    font-size: 1.4em;
 }
 
 .suivre {
@@ -297,13 +279,225 @@ body{
     margin-bottom: 5vh;
 }
 
-.user_music_playlist {
-    width: 70vw;
-    height: 100vh;
-}
 .pseudo {
     color: #393539;
     font-family: "coolvetica";
     font-size: 2em;
     font-weight: normal;
 }
+
+.playlists{
+    width: 60%;
+    margin-left: 5vw;
+}
+
+.playlists h2{
+    text-align: center;
+}
+
+.musics_playlist{
+    display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Louise */

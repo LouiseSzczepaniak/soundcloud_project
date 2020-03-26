@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Chanson;
+use App\Playlist;
+use App\Playlists_chanson;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -10,7 +12,6 @@ use Illuminate\Support\Facades\Auth;
 class FirstController extends Controller
 {
     public function index(){
-
         $chansons = Chanson::all();
         /*$c = Chanson::find(1);*/
         return view('FirstController.index', ["chansons" => $chansons]);
@@ -28,8 +29,23 @@ class FirstController extends Controller
         return view('FirstController.utilisateur', ['utilisateur'=>$u]);
     }
 
+    public function playlists($id){
+        $playlists = Playlist::findOrFail($id);
+        return view('FirstController.playlists', ['playlists' => $playlists]);
+    }
+
+    public function afficheplaylists($id){
+        $playlists = Playlist::findOrFail($id);
+        return view('FirstController.utilisateur', ['playlists' => $playlists]);
+    }
+
     public function nouvellechanson(){
         return view('FirstController.nouvelle');
+    }
+
+    public function like($id) {
+        Auth::user()->jeLike()->toggle($id);
+        return redirect("/");
     }
 
     public function creerchanson(Request $request){
