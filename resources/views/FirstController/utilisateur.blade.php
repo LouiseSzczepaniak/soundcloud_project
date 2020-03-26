@@ -7,16 +7,13 @@
         @auth
                 @if(Auth::id() != $utilisateur->id)
                     @if(Auth::user()->jeLesSuit->contains($utilisateur->id))
-                        <a href="/suivre/{{$utilisateur->id}}"> je le suis </a>
+                        <a href="/suivre/{{$utilisateur->id}}" class="suivre"> Se désabonner </a>
                         @else
-                        <a href="/suivre/{{$utilisateur->id}}"> je ne le suis pas</a>
+                        <a href="/suivre/{{$utilisateur->id}}" class="suivre"> S'abonner </a>
                     @endif
                 @endif
         @endauth
 
-                <div>
-                    <input type="button" class="suivre" value="Suivre"/>
-                </div>
                 <div>
                     <!-- parenthèses permettent de ne pas tout charger -->
                     <strong> {{$utilisateur->jeLesSuit()->count()}}</strong> abonnements

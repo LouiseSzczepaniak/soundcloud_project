@@ -206,9 +206,43 @@ body{
 
 .listePlaylists{
     display: none;
+    background-color: #c3cee1;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    position: absolute;
+    right: -6em;
+    top: 0;
 }
 
+.ensemble_listPlaylist{
+    position: relative;
+}
 
+.listePlaylists a{
+    text-decoration: none;
+    color: white;
+    font-size: 0.9em;
+    padding-top: 0.5em;
+}
+
+.affichPlaylists{
+    background: #475069;
+    font-family: "coolvetica";
+    font-size: 1.1em;
+    color: white;
+    border-radius: 1.5vh;
+    text-align: center;
+    font-weight: normal;
+    width: 10.5vw;
+    height: 3.1vh;
+    border:none;
+    outline:none;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-bottom: 1.2vh;
+}
 
 /* Page search */
 .resultat_search{
@@ -273,16 +307,17 @@ body{
 .suivre {
     background: #475069;
     font-family: "coolvetica";
-    font-size: 1.2em;
+    font-size: 1.1em;
     color: white;
     border-radius: 1vh;
     text-align: center;
     font-weight: normal;
     width: 10vw;
-    text-transform: lowercase;
+    padding: 0.2em 0;
     border:none;
     outline:none;
-    margin-bottom: 5vh;
+    margin-bottom: 4.5vh;
+    text-decoration: none;
 }
 
 .pseudo {
@@ -518,24 +553,24 @@ body{
 }
 
 /* popup */
-  
+
   .underline {
     position: absolute;
     height: 4px;
     background-color: #ceaee8;
     transition: all 0.5s ease;
   }
-  
+
   .container {
     width: 100%;
     height: 15vh;
     border-radius: 5px;
     z-index: 2;
   }
-  
 
 
-  
+
+
   .overlay {
     position: fixed;
     left: 0;
@@ -548,12 +583,12 @@ body{
     visibility: hidden;
     transition: all .5s ease;
   }
-  
+
   .overlay.visible {
     opacity: 1;
     visibility: visible;
   }
-  
+
   .main-popup {
     position: fixed;
     top: 20vh;
@@ -570,14 +605,14 @@ body{
     transition: all .5s ease;
     /*overflow: hidden;*/
   }
-  
+
   .main-popup.visible {
     opacity: 1;
     visibility: visible;
     transform: translateY(10px);
     transition: all .5s ease;
   }
-  
+
   @media (min-width: 500px) {
     /** .main-popup {
       width: 500px;
@@ -585,7 +620,7 @@ body{
       margin: 0 0 0 -250px;
     }**/
   }
-  
+
   .popup-header {
     position: relative;
     padding: 0;
@@ -593,7 +628,7 @@ body{
     height: 62px;
     width: 100%;
   }
-  
+
   #popup-close-button a {
     position: absolute;
     right: 10px;
@@ -601,7 +636,7 @@ body{
     width: 22px;
     height: 22px;
   }
-  
+
   #popup-close-button a::before {
     content: '';
     position: absolute;
@@ -616,7 +651,7 @@ body{
     -o-transform: rotate(45deg);
     transform: rotate(45deg);
   }
-  
+
   #popup-close-button a::after {
     content: '';
     position: absolute;
@@ -631,19 +666,19 @@ body{
     -o-transform: rotate(-45deg);
     transform: rotate(-45deg);
   }
-  
+
   .popup-header ul {
     margin: 0;
     padding: 0;
   }
-  
+
   .popup-header ul li {
     text-align: center;
     list-style: none;
     width: 50%;
     float: left;
   }
-  
+
   .popup-header ul li a {
     display: block;
     padding: 20px 0;
@@ -651,36 +686,36 @@ body{
     text-decoration: none;
     font-size: 1.2em;
   }
-  
+
   #sign-in {
     background-color: #ceaee8;
     color: #fff;
     border-radius: 5px 0 0 0;
   }
-  
+
   #sign-in.active {
     color: #ceaee8;
     background-color: transparent;
   }
-  
+
   #register {
     background-color: #ceaee8;
     color: #fff;
     border-radius: 0 5px 0 0;
   }
-  
+
   #register.active {
     color: #ceaee8;
     background-color: transparent;
   }
-  
+
   .popup-content {
     height: 50vh;
     overflow: hidden;
   }
-  
+
   form.sign-in {
-    position: relative; 
+    position: relative;
     top: 40px;
     left: 0;
     font-size: 1em;
@@ -690,18 +725,18 @@ body{
     -o-transition: all .35s;
     transition: all .35s;
   }
-  
+
   form.sign-in.move-left {
     opacity: 0;
     transform: translateX(-450px);
   }
-  
+
   form label {
     font-size: 1.1em;
     color: #ceaee8;
     margin-left: 23px;
   }
-  
+
   form.sign-in input {
     border-radius: 5px;
     width: 90%;
@@ -713,7 +748,7 @@ body{
     outline: none;
     border: none;
   }
-  
+
   input#submit {
     background-color: #ceaee8;
     color: #fff;
@@ -729,9 +764,9 @@ body{
     font-size: 1em;
     border: none;
   }
-  
+
   form.register {
-    position: relative; 
+    position: relative;
     top: -280px;
     left: 0;
     font-size: 1em;
@@ -742,12 +777,12 @@ body{
     -o-transition: all .35s;
     transition: all .35s;
   }
-  
+
   form.register.move-left {
     opacity: 1;
     transform: translateX(0);
   }
-  
+
   form.register input {
     border-radius: 5px;
     width: 90%;
@@ -759,7 +794,7 @@ body{
     outline: none;
     border: none;
   }
-  
+
   p.check-mark {
     position: relative;
     left: 50%;
@@ -770,11 +805,11 @@ body{
     color: #ceaee8;
     font-size: .8em;
   }
-  
+
   p.check-mark a {
     color: #a48bb9;
   }
-  
+
   p.check-mark input {
     border-radius: 0;
     width: auto;
@@ -786,7 +821,7 @@ body{
     outline: none;
     border: none;
   }
-  
+
   p.check-mark label {
     margin-left: 5px;
   }
