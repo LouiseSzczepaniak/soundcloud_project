@@ -49,6 +49,23 @@ class FirstController extends Controller
         return back();
     }
 
+    public function nouvelleplaylist(){
+        return view('FirstController.nouvellep');
+    }
+
+    public function creerplaylist(Request $request){
+        $request->validate([
+            'name' => 'required|min:3|max:255'
+        ]);
+
+        $p = new Playlist();
+        $p->name = $request->input('name');
+        $p->user_id = Auth::id();
+        $p->save();
+
+        return redirect('/utilisateur/'. Auth::id());
+    }
+
     public function like($id) {
         Auth::user()->jeLike()->toggle($id);
         return redirect("/");
