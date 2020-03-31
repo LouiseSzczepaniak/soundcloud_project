@@ -27,7 +27,17 @@
             </div>
 
             <div class="playlists">
-                <h2> Playlists</h2>
+                <div class="titre_section_playlist">
+                    <h2> Playlists</h2>
+                    <p class="bouton_nouvelle_playlist"> Créer une playlist </p>
+                    <div class="nouvelle_playlist" id="nouvelle_playlist">
+                        <form action="/playlist/create" method="POST" enctype="multipart/form-data">
+                            @csrf
+                            <input type="text" name="name" required placeholder="Le nom de la playlist" value="{{old('name')}}"/> <br/>
+                            <input type="submit" value="Créer" />
+                        </form>
+                    </div>
+                </div>
                 @foreach($utilisateur->playlists as $p)
                     <div class="uneplaylist">
                         <h3> {{$p->name}} </h3>
