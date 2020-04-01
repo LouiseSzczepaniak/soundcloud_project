@@ -49,10 +49,6 @@ class FirstController extends Controller
         return back();
     }
 
-    public function nouvelleplaylist(){
-        return view('FirstController.nouvellep');
-    }
-
     public function creerplaylist(Request $request){
         $request->validate([
             'name' => 'required|min:3|max:255'
