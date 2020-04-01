@@ -49,6 +49,21 @@ class FirstController extends Controller
         return back();
     }
 
+    public function supprimerplaylist($id){
+        $p = Playlist::findOrFail($id);
+        if($p->user_id != Auth::id()) abort(404);
+        $p->chansons()->detach();
+        $p->delete();
+        return redirect('/utilisateur/'. Auth::id());
+    }
+
+    public function supprimerchansonplaylist($chanson_id, $playlist_id){
+        $p = Playlist::find($playlist_id);
+        $p->chansons()->detach();
+        $p->delete();
+        return redirect('/utilisateur/'. Auth::id());
+    }
+
     public function creerplaylist(Request $request){
         $request->validate([
             'name' => 'required|min:3|max:255'
