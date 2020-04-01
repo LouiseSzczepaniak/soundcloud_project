@@ -23,7 +23,6 @@ Route::post('/chanson/create', 'FirstController@creerchanson')->middleware('auth
 Route::get('/suivre/{id}', 'FirstController@suivre')->where('id', '[0-9]+')->middleware('auth');
 
 Route::get('/playlists/{id}', 'FirstController@playlists')->where('id', '[0-9]+');
-Route::get('/playlist/nouvelle', 'FirstController@nouvelleplaylist')->middleware('auth');
 Route::post('/playlist/create', 'FirstController@creerplaylist')->middleware('auth');
 Route::get('/ajouterplaylist/{chanson_id}/{playlists_id}', 'FirstController@ajouterplaylist')->where('playlists_id', '[0-9]+');
 
