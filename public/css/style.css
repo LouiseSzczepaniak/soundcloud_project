@@ -701,7 +701,7 @@ html, body, * {
     left: 45%;
     top: 3vh;
     width: 20vw;
-    margin: -35px 0 0 -100px;
+    margin: -35px 0 0 -130px;
     padding: 15px 30px;
     border-radius: 2vh;
     background-color: #475069;
@@ -888,6 +888,10 @@ html, body, * {
     transition: all .35s;
   }
 
+  .oubliepassword{
+      margin-left: 2em;
+  }
+
   form.sign-in.move-left {
     opacity: 0;
     transform: translateX(-450px);
@@ -911,6 +915,20 @@ html, body, * {
     border: none;
   }
 
+  form.sign-in input[type="password"]{
+      margin-bottom: 0;
+  }
+
+  form.sign-in input[type="checkbox"]{
+      width: 10%;
+      height: 20px;
+      margin: 0;
+  }
+
+  .rememberme label{
+      margin-left: 0;
+  }
+
   input#submit {
     background-color: #ceaee8;
     color: #fff;
@@ -929,7 +947,7 @@ html, body, * {
 
   form.register {
     position: relative;
-    top: -280px;
+    top: -230px;
     left: 0;
     font-size: 1em;
     opacity: 0;
@@ -994,7 +1012,10 @@ html, body, * {
   }
 
   .rememberme {
-    display:flex;
+      display:flex;
+      justify-content: center;
+      margin-top: 3em;
+      margin-bottom: 1em;
   }
 
  input [type='checkbox'] {

@@ -18,47 +18,53 @@
         <div class="icons">
             <a href="/utilisateur/{{Auth::id()}}"> mon profil</a>
         </div>
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+            @csrf
+        </form>
+        <a class="logout" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+        </a>
        @endauth
 </nav>
 
 <body>
-
-    <div id='popup'>
-        <div class="container">
-            <div class='login' id='login'></div>
-        </div>
-
-        <div class="overlay">
-        </div>
-
-        <div class="main-popup">
-            <div id="popup-close-button">
-                <a href="#"></a>
+        @guest
+        <div id='popup'>
+            <div class="container">
+                <div class='login' id='login'></div>
             </div>
 
-            <div class="popup-header">
-                <ul>
-                  <li>
-                      <a href="#" id="sign-in">Sign In</a>
-                  </li>
-                  <li>
-                      <a href="#" id="register">Register</a>
-                  </li>
-                </ul>
-            </div><!--.popup-header-->
+            <div class="overlay">
+            </div>
 
-            <div class="popup-content">
-                <form action="#" class="sign-in">
-                    @include('auth.login')
-                </form>
+            <div class="main-popup">
+                <div id="popup-close-button">
+                    <a href="#"></a>
+                </div>
 
-                <form action="#" class="register">
-                    @if(Route::has('register'))
-                        @include('auth.register')
-                    @endif
-                </form>
-            </div><!--.popup-content-->
-        </div><!--.main-popup-->
+                <div class="popup-header">
+                    <ul>
+                      <li>
+                          <a href="#" id="sign-in">Sign In</a>
+                      </li>
+                      <li>
+                          <a href="#" id="register">Register</a>
+                      </li>
+                    </ul>
+                </div><!--.popup-header-->
+
+                <div class="popup-content">
+                    <div>
+                        @include('auth.login')
+                    </div>
+
+                    <div>
+                        @if(Route::has('register'))
+                            @include('auth.register')
+                        @endif
+                    </div>
+                </div><!--.popup-content-->
+            </div><!--.main-popup-->
+            @endguest
 </div>
 
 
