@@ -14,11 +14,14 @@
         <a href="/">
             <div class="logo"></div>
         </a>
+     
 </nav>
 <body>
+   
 <div id='popup'>
 <div class="container">
   <div class='login' id='login'></div>
+ 
 </div>
 <div class="overlay">
 </div>

@@ -42,10 +42,6 @@ body{
     color: white;
 }
 
-.icons{
-    display: flex;
-    margin-right: 3vw;
-}
 
 .logo{
     background-image: url('../img/logo2.png');
