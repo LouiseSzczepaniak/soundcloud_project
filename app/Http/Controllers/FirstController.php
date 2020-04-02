@@ -59,8 +59,7 @@ class FirstController extends Controller
 
     public function supprimerchansonplaylist($chanson_id, $playlist_id){
         $p = Playlist::find($playlist_id);
-        $p->chansons()->detach();
-        $p->delete();
+        $p->chansons()->detach($chanson_id);
         return redirect('/utilisateur/'. Auth::id());
     }
 
