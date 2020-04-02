@@ -4,51 +4,67 @@
     <meta charset='UTF-8'>
     <meta name="csrf-token" content="{{ csrf_token() }}" />
     <title> LISTEN & UPLOAD </title>
-   <link type="text/css" rel="stylesheet" href="/css/style.css"/>
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-   <script src="/js/jquery.js"></script>
-     <script src="/js/popup.js"></script>
-    
+    <link type="text/css" rel="stylesheet" href="/css/style.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <script src="/js/jquery.js"></script>
+    <script src="/js/popup.js"></script>
 </head>
+
 <nav class="menu_principal">
         <a href="/">
             <div class="logo"></div>
         </a>
-     
+        @auth
+        <div class="icons">
+            <a href="/utilisateur/{{Auth::id()}}" class="myaccount"></a>
+        </div>
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+            @csrf
+        </form>
+        <a class="logout" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+        </a>
+       @endauth
 </nav>
-<body>
-   
-<div id='popup'>
-<div class="container">
-  <div class='login' id='login'></div>
- 
-</div>
-<div class="overlay">
-</div>
 
-<div class="main-popup">
-<div id="popup-close-button"><a href="#"></a></div>
-    
-  <div class="popup-header">
-    
-    <ul>
-      <li><a href="#" id="sign-in">Sign In</a></li>
-      <li><a href="#" id="register">Register</a></li>
-    </ul>
-  </div><!--.popup-header-->
-<div class="popup-content">
-    <form action="#" class="sign-in">
-    @include('auth.login')
-    </form>
-   
-    <form action="#" class="register">
-    @if(Route::has('register'))
-                @include('auth.register')
-            
-        @endif
-    </form>
-  </div><!--.popup-content-->
-</div><!--.main-popup-->
+<body>
+        @guest
+        <div id='popup'>
+            <div class="container">
+                <div class='login' id='login'></div>
+            </div>
+
+            <div class="overlay">
+            </div>
+
+            <div class="main-popup">
+                <div id="popup-close-button">
+                    <a href="#"></a>
+                </div>
+
+                <div class="popup-header">
+                    <ul>
+                      <li>
+                          <a href="#" id="sign-in">Sign In</a>
+                      </li>
+                      <li>
+                          <a href="#" id="register">Register</a>
+                      </li>
+                    </ul>
+                </div><!--.popup-header-->
+
+                <div class="popup-content">
+                    <div>
+                        @include('auth.login')
+                    </div>
+
+                    <div>
+                        @if(Route::has('register'))
+                            @include('auth.register')
+                        @endif
+                    </div>
+                </div><!--.popup-content-->
+            </div><!--.main-popup-->
+            @endguest
 </div>
 
 
@@ -59,7 +75,7 @@
 <!--
 <div id='all'>
     <div id="app-cover">
-       
+
         <div id="player">
             <div id="player-track">
                 <div id="album-name"></div>
@@ -107,8 +123,7 @@
 <!--<audio id="audio" controls>
 </audio>-->
 <footer> Le pied de la page </footer>
-{{$c->nom}}
 <script src="/js/divers.js"></script>
 @yield('player')
-    </body> 
+    </body>
 </html>

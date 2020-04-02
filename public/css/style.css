@@ -18,7 +18,7 @@
 body{
     margin: 0;
     font-family: Helvetica, Arial;
-    background-color:  #ffeff5;
+    background-color:  #fff;
 }
 
 
@@ -638,28 +638,28 @@ body{
 }
 
 /* popup */
-  
+
 #popup{
 }
-  
+
 html, body, * {
     box-sizing: border-box;
   }
-  
+
   nav {
     height: 60px;
   }
-  
+
   nav h1 {
     float: left;
     margin: 10px 0 0 30px;
     font-size: 2em;
   }
-  
+
   nav ul {
     float: right;
   }
-  
+
   nav ul li {
     display: inline-block;
     list-style: none;
@@ -669,19 +669,19 @@ html, body, * {
     color: #ccc;
     transition: all 0.5s ease;
   }
-  
+
   nav ul li:hover {
     color: #000;
   }
-  
+
   nav ul li:last-child {
     margin-right: 20px;
   }
-  
+
   nav ul li.active {
     color: #000;
   }
- 
+
   .underline {
     position: absolute;
     height: 4px;
@@ -691,13 +691,13 @@ html, body, * {
 
   .container {
   }
-  
+
   button {
     position: relative;
     left: 45%;
     top: 3vh;
     width: 20vw;
-    margin: -35px 0 0 -100px;
+    margin: -35px 0 0 -130px;
     padding: 15px 30px;
     border-radius: 2vh;
     background-color: #475069;
@@ -714,12 +714,12 @@ html, body, * {
       transition: all 0.5s ease;
     outline: none;
   }
-  
+
   button:hover {
     opacity 0.8;
     box-shadow: 0 2px 5px #9a9a9a;
   }
- 
+
   .overlay {
     position: fixed;
     left: 0;
@@ -783,8 +783,8 @@ html, body, * {
     position: absolute;
     bottom:2vh;
     left: 1vw;
-    
-    
+
+
     width: 22px;
     height: 22px;
     z-index:16;
@@ -869,7 +869,7 @@ html, body, * {
   .popup-content {
     height: 400px;
     background: #ebf0f7;
-    
+
   }
 
   form.sign-in {
@@ -882,6 +882,10 @@ html, body, * {
     -moz-transition: all .35s;
     -o-transition: all .35s;
     transition: all .35s;
+  }
+
+  .oubliepassword{
+      margin-left: 2em;
   }
 
   form.sign-in.move-left {
@@ -907,6 +911,20 @@ html, body, * {
     border: none;
   }
 
+  form.sign-in input[type="password"]{
+      margin-bottom: 0;
+  }
+
+  form.sign-in input[type="checkbox"]{
+      width: 10%;
+      height: 20px;
+      margin: 0;
+  }
+
+  .rememberme label{
+      margin-left: 0;
+  }
+
   input#submit {
     background-color: #ceaee8;
     color: #fff;
@@ -925,7 +943,7 @@ html, body, * {
 
   form.register {
     position: relative;
-    top: -280px;
+    top: -230px;
     left: 0;
     font-size: 1em;
     opacity: 0;
@@ -990,7 +1008,10 @@ html, body, * {
   }
 
   .rememberme {
-    display:flex;
+      display:flex;
+      justify-content: center;
+      margin-top: 3em;
+      margin-bottom: 1em;
   }
 
  input [type='checkbox'] {
