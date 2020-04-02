@@ -1,4 +1,4 @@
-<h2> Connexion </h2>
+
     <div class="infos">
         <form method="POST" action="{{ route('login') }}">
             @csrf
@@ -13,7 +13,7 @@
                 @enderror
             </div>
 
-            <div lcass="uneinfo">
+            <div class="uneinfo">
                 <label for="password"> Mot de passe </label>
                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
 
