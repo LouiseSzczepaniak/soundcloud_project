@@ -18,7 +18,7 @@
 body{
     margin: 0;
     font-family: Helvetica, Arial;
-    background-color:  #ffeff5;
+    background-color:  #fff7f7;
 }
 
 
@@ -642,28 +642,28 @@ body{
 }
 
 /* popup */
-  
+
 #popup{
 }
-  
+
 html, body, * {
     box-sizing: border-box;
   }
-  
+
   nav {
     height: 60px;
   }
-  
+
   nav h1 {
     float: left;
     margin: 10px 0 0 30px;
     font-size: 2em;
   }
-  
+
   nav ul {
     float: right;
   }
-  
+
   nav ul li {
     display: inline-block;
     list-style: none;
@@ -673,19 +673,19 @@ html, body, * {
     color: #ccc;
     transition: all 0.5s ease;
   }
-  
+
   nav ul li:hover {
     color: #000;
   }
-  
+
   nav ul li:last-child {
     margin-right: 20px;
   }
-  
+
   nav ul li.active {
     color: #000;
   }
- 
+
   .underline {
     position: absolute;
     height: 4px;
@@ -695,7 +695,7 @@ html, body, * {
 
   .container {
   }
-  
+
   button {
     position: relative;
     left: 45%;
@@ -718,12 +718,12 @@ html, body, * {
       transition: all 0.5s ease;
     outline: none;
   }
-  
+
   button:hover {
     opacity 0.8;
     box-shadow: 0 2px 5px #9a9a9a;
   }
- 
+
   .overlay {
     position: fixed;
     left: 0;
@@ -787,8 +787,8 @@ html, body, * {
     position: absolute;
     bottom:2vh;
     left: 1vw;
-    
-    
+
+
     width: 22px;
     height: 22px;
     z-index:16;
@@ -873,7 +873,7 @@ html, body, * {
   .popup-content {
     height: 400px;
     background: #ebf0f7;
-    
+
   }
 
   form.sign-in {
