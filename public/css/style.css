@@ -213,9 +213,43 @@ body{
 
 .listePlaylists{
     display: none;
+    background-color: #c3cee1;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    position: absolute;
+    right: -6em;
+    top: 0;
 }
 
+.ensemble_listPlaylist{
+    position: relative;
+}
 
+.listePlaylists a{
+    text-decoration: none;
+    color: white;
+    font-size: 0.9em;
+    padding-top: 0.5em;
+}
+
+.affichPlaylists{
+    background: #475069;
+    font-family: "coolvetica";
+    font-size: 1.1em;
+    color: white;
+    border-radius: 1.5vh;
+    text-align: center;
+    font-weight: normal;
+    width: 10.5vw;
+    height: 3.1vh;
+    border:none;
+    outline:none;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-bottom: 1.2vh;
+}
 
 /* Page search */
 .resultat_search{
@@ -280,16 +314,17 @@ body{
 .suivre {
     background: #475069;
     font-family: "coolvetica";
-    font-size: 1.2em;
+    font-size: 1.1em;
     color: white;
     border-radius: 1vh;
     text-align: center;
     font-weight: normal;
     width: 10vw;
-    text-transform: lowercase;
+    padding: 0.2em 0;
     border:none;
     outline:none;
-    margin-bottom: 5vh;
+    margin-bottom: 4.5vh;
+    text-decoration: none;
 }
 
 .pseudo {
@@ -308,8 +343,52 @@ body{
     text-align: center;
 }
 
+.titre_section_playlist{
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    align-items: center;
+}
+
+.titre_section_playlist p{
+    background: #475069;
+    font-family: "coolvetica";
+    font-size: 1.2em;
+    color: white;
+    border-radius: 1.5vh;
+    text-align: center;
+    font-weight: normal;
+    width: 10.5vw;
+    height: 3.2vh;
+    border:none;
+    padding-top: 0.2em;
+}
+
 .musics_playlist{
     display: flex;
+}
+
+.nouvelle_playlist{
+    display: none;
+    position: absolute;
+    right: -2.2em;
+    top: 1.2em;
+}
+
+.nouvelle_playlist form{
+    display: flex;
+}
+
+.nouvelle_playlist input[type="text"]{
+    border: none;
+    border-radius: 0.5em;
+    font-size: 1em;
+    height: 3vh;
+    padding-left: 1vw;
+}
+
+.nouvelle_playlist input[type="submit"]{
+
 }
 
 
@@ -563,7 +642,6 @@ body{
 }
 
 /* popup */
-
   
 #popup{
 }
@@ -607,14 +685,14 @@ html, body, * {
   nav ul li.active {
     color: #000;
   }
-  
+ 
   .underline {
     position: absolute;
     height: 4px;
     background-color: #ceaee8;
     transition: all 0.5s ease;
   }
-  
+
   .container {
   }
   
@@ -645,7 +723,7 @@ html, body, * {
     opacity 0.8;
     box-shadow: 0 2px 5px #9a9a9a;
   }
-  
+ 
   .overlay {
     position: fixed;
     left: 0;
@@ -658,12 +736,12 @@ html, body, * {
     visibility: hidden;
     transition: all .5s ease;
   }
-  
+
   .overlay.visible {
     opacity: 1;
     visibility: visible;
   }
-  
+
   .main-popup {
     position: fixed;
     left: 0;
@@ -681,14 +759,14 @@ html, body, * {
     transition: all .5s ease;
     /*overflow: hidden;*/
   }
-  
+
   .main-popup.visible {
     opacity: 1;
     visibility: visible;
     transform: translateY(10px);
     transition: all .5s ease;
   }
-  
+
   @media (min-width: 500px) {
     .main-popup {
       width: 500px;
@@ -696,7 +774,7 @@ html, body, * {
       margin: 0 0 0 -250px;
     }
   }
-  
+
   .popup-header {
     position: relative;
     padding: 0;
@@ -704,7 +782,7 @@ html, body, * {
     height: 62px;
     width: 100%;
   }
-  
+
   #popup-close-button a {
     position: absolute;
     bottom:2vh;
@@ -715,7 +793,7 @@ html, body, * {
     height: 22px;
     z-index:16;
   }
-  
+
   #popup-close-button a::before {
     content: '';
     position: absolute;
@@ -730,7 +808,7 @@ html, body, * {
     -o-transform: rotate(45deg);
     transform: rotate(45deg);
   }
-  
+
   #popup-close-button a::after {
     content: '';
     position: absolute;
@@ -745,19 +823,19 @@ html, body, * {
     -o-transform: rotate(-45deg);
     transform: rotate(-45deg);
   }
-  
+
   .popup-header ul {
     margin: 0;
     padding: 0;
   }
-  
+
   .popup-header ul li {
     text-align: center;
     list-style: none;
     width: 50%;
     float: left;
   }
-  
+
   .popup-header ul li a {
     display: block;
     padding: 20px 0;
@@ -765,7 +843,7 @@ html, body, * {
     text-decoration: none;
     font-size: 1.2em;
   }
-  
+
   #sign-in {
     background-color: #475069;
     color: #ebf0f7;
@@ -773,12 +851,12 @@ html, body, * {
     font-family: "coolvetica";
     text-transform: lowercase;
   }
-  
+
   #sign-in.active {
     color: #393539;
     background-color: #ebf0f7;
   }
-  
+
   #register {
     background-color: #475069;
     color: #ebf0f7;
@@ -786,21 +864,20 @@ html, body, * {
     font-family: "coolvetica";
     text-transform: lowercase;
   }
-  
+
   #register.active {
     color: #393539;
     background-color: #ebf0f7;
   }
-  
-  
+
   .popup-content {
     height: 400px;
     background: #ebf0f7;
     
   }
-  
+
   form.sign-in {
-    position: relative; 
+    position: relative;
     top: 40px;
     left: 0;
     font-size: 1em;
@@ -810,18 +887,18 @@ html, body, * {
     -o-transition: all .35s;
     transition: all .35s;
   }
-  
+
   form.sign-in.move-left {
     opacity: 0;
     transform: translateX(-450px);
   }
-  
+
   form label {
     font-size: 1.1em;
     color: #393539;
     margin-left: 23px;
   }
-  
+
   form.sign-in input {
     border-radius: 5px;
     width: 90%;
@@ -833,7 +910,7 @@ html, body, * {
     outline: none;
     border: none;
   }
-  
+
   input#submit {
     background-color: #ceaee8;
     color: #fff;
@@ -849,9 +926,9 @@ html, body, * {
     font-size: 1em;
     border: none;
   }
-  
+
   form.register {
-    position: relative; 
+    position: relative;
     top: -280px;
     left: 0;
     font-size: 1em;
@@ -862,12 +939,12 @@ html, body, * {
     -o-transition: all .35s;
     transition: all .35s;
   }
-  
+
   form.register.move-left {
     opacity: 1;
     transform: translateX(0);
   }
-  
+
   form.register input {
     border-radius: 5px;
     width: 90%;
@@ -879,7 +956,7 @@ html, body, * {
     outline: none;
     border: none;
   }
-  
+
   p.check-mark {
     position: relative;
     left: 50%;
@@ -890,11 +967,11 @@ html, body, * {
     color: #ceaee8;
     font-size: .8em;
   }
-  
+
   p.check-mark a {
     color: #a48bb9;
   }
-  
+
   p.check-mark input {
     border-radius: 0;
     width: auto;
@@ -906,7 +983,7 @@ html, body, * {
     outline: none;
     border: none;
   }
-  
+
   p.check-mark label {
     margin-left: 5px;
   }
