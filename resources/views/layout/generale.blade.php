@@ -16,7 +16,7 @@
         </a>
         @auth
         <div class="icons">
-            <a href="/utilisateur/{{Auth::id()}}"> mon profil</a>
+            <a href="/utilisateur/{{Auth::id()}}" class="myaccount"></a>
         </div>
         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
             @csrf
