@@ -16,6 +16,14 @@
             @else
                  <a data-pjax class="a_like" href="/like/{{$c->id}}"><div class="like_hover"></div></a>
             @endif
+                <div id="{{$c->id}}">
+                    <input type="button" class="affichPlaylists" id="affichPlaylists{{$c->id}}" value="Ajouter à une playlist"/>
+                    <div class="listePlaylists" id="listePlaylists{{$c->id}}">
+                        @foreach(Auth::user()->playlists as $p)
+                            <a href="/ajouterplaylist/{{$c->id}}/{{$p->id}}"> Ajouter à la playlist {{$p->name}}</a><br/>
+                        @endforeach
+                    </div>
+                </div>
         @endauth
     </div>
 @endforeach

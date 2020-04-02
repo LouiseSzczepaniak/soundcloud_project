@@ -17,10 +17,11 @@
 }
 body{
     margin: 0;
-    font-family: gravity;
+    font-family: Helvetica, Arial;
     
-    background-color: #ebf0f7;
+    background-color:  #ffeff5;
 }
+
 
 
 /* Sur toutes les pages */
@@ -175,8 +176,6 @@ body{
     margin: auto;
 }
 
-
-
 .banniere_accueil{
     background-image: url("/img/banniere_accueil.jpg");
     background-repeat: no-repeat;
@@ -212,6 +211,12 @@ body{
     padding: 10px 15px;
     font-size: 1.7em;
 }
+
+.listePlaylists{
+    display: none;
+}
+
+
 
 /* Page search */
 .resultat_search{
@@ -928,12 +933,6 @@ html, body, * {
     outline: none;
 }
 
-body
-{
-    font-family: Helvetica, Arial;
-    margin: 0;
-    background-color: #ffeff5;
-}
 #all{
     position: fixed;
     bottom: 0;
@@ -1256,3 +1255,79 @@ body
 {
     color: #fff;
 }
+
+html.remodal-is-locked {
+    overflow: hidden;
+
+    touch-action: none;
+  }
+
+  /* Anti FOUC */
+
+  .remodal,
+  [data-remodal-id] {
+    display: none;
+  }
+
+  /* Necessary styles of the overlay */
+
+  .remodal-overlay {
+    position: fixed;
+    z-index: 9999;
+    top: -5000px;
+    right: -5000px;
+    bottom: -5000px;
+    left: -5000px;
+
+    display: none;
+  }
+
+  /* Necessary styles of the wrapper */
+
+  .remodal-wrapper {
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: none;
+    overflow: auto;
+
+    text-align: center;
+
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .remodal-wrapper:after {
+    display: inline-block;
+
+    height: 100%;
+    margin-left: -0.05em;
+
+    content: "";
+  }
+
+  /* Fix iPad, iPhone glitches */
+
+  .remodal-overlay,
+  .remodal-wrapper {
+    backface-visibility: hidden;
+  }
+
+  /* Necessary styles of the modal dialog */
+
+  .remodal {
+    position: relative;
+
+    outline: none;
+
+    text-size-adjust: 100%;
+  }
+
+  .remodal-is-initialized {
+    /* Disable Anti-FOUC */
+    display: inline-block;
+  }
+
