@@ -7,16 +7,13 @@
         @auth
                 @if(Auth::id() != $utilisateur->id)
                     @if(Auth::user()->jeLesSuit->contains($utilisateur->id))
-                        <a href="/suivre/{{$utilisateur->id}}"> je le suis </a>
+                        <a href="/suivre/{{$utilisateur->id}}" class="suivre"> Se désabonner </a>
                         @else
-                        <a href="/suivre/{{$utilisateur->id}}"> je ne le suis pas</a>
+                        <a href="/suivre/{{$utilisateur->id}}" class="suivre"> S'abonner </a>
                     @endif
                 @endif
         @endauth
 
-                <div>
-                    <input type="button" class="suivre" value="Suivre"/>
-                </div>
                 <div>
                     <!-- parenthèses permettent de ne pas tout charger -->
                     <strong> {{$utilisateur->jeLesSuit()->count()}}</strong> abonnements
@@ -30,13 +27,25 @@
             </div>
 
             <div class="playlists">
-                <h2> Playlists</h2>
+                <div class="titre_section_playlist">
+                    <h2> Playlists</h2>
+                    <p class="bouton_nouvelle_playlist"> Créer une playlist </p>
+                    <div class="nouvelle_playlist" id="nouvelle_playlist">
+                        <form action="/playlist/create" method="POST" enctype="multipart/form-data">
+                            @csrf
+                            <input type="text" name="name" required placeholder="Le nom de la playlist" value="{{old('name')}}"/> <br/>
+                            <input type="submit" value="Créer" />
+                        </form>
+                    </div>
+                </div>
                 @foreach($utilisateur->playlists as $p)
                     <div class="uneplaylist">
                         <h3> {{$p->name}} </h3>
+                        <a href="/playlist/delete/{{$p->id}}"> Supprimer la playlist </a>
                         <div class="musics_playlist">
                         @foreach($p->chansons as $c)
                                 <div>
+                                    <a href="/playlist/deletechanson/{{$c->id}}/{{$p->id}}"> Supprimer la chanson de la playlsit</a>
                                     <a href="#" data-file="{{$c->url}}" class="chanson">
                                         <img src="/img/image_musique.png" alt="imagemusique"/>
                                     </a>

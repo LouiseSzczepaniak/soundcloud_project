@@ -19,10 +19,19 @@ $(document).ready(function(){
 $(".affichPlaylists").click(function(){
     let nb = $(this).parent('div').attr('id');
     let etat = document.getElementById("listePlaylists"+nb).style.display;
-    if(etat === "block"){
+    if(etat === "flex"){
         document.getElementById("listePlaylists"+nb).style.display = "none";
     } else {
-        document.getElementById("listePlaylists"+nb).style.display = "block";
+        document.getElementById("listePlaylists"+nb).style.display = "flex";
+    }
+})
+
+$(".bouton_nouvelle_playlist").click(function(){
+    let etatplaylist = document.getElementById("nouvelle_playlist").style.display;
+    if(etatplaylist === "flex"){
+        document.getElementById("nouvelle_playlist").style.display = "none";
+    } else {
+        document.getElementById("nouvelle_playlist").style.display = "flex";
     }
 })
 
@@ -46,11 +55,11 @@ $(function() {
   var $register = $('#register');
   var $formSignIn = $('form.sign-in');
   var $formRegister = $('form.register');
-  
+
   var $firstChild = $('nav ul li:first-child');
   var $secondChild = $('nav ul li:nth-child(2)');
   var $thirdChild = $('nav ul li:nth-child(3)');
-  
+
   //defining function to create underline initial state on document load
   function initialState() {
     $('.underline').css({
@@ -60,7 +69,7 @@ $(function() {
     });
   }
   initialState(); //() used after calling function to call function immediately on doc load
-  
+
   //defining function to change underline depending on which li is active
   function changeUnderline(el) {
     $('.underline').css({
@@ -69,7 +78,7 @@ $(function() {
       "top": el.position().top + el.outerHeight(true) + 'px'
     });
   } //note: have not called the function...don't want it called immediately
-  
+
   $firstChild.on('click', function(){
     var el = $firstChild;
     changeUnderline(el); //call the changeUnderline function with el as the perameter within the called function
@@ -77,7 +86,7 @@ $(function() {
     $thirdChild.removeClass('active');
     $(this).addClass('active');
   });
-  
+
   $secondChild.on('click', function(){
     var el = $secondChild;
     changeUnderline(el); //call the changeUnderline function with el as the perameter within the called function
@@ -85,7 +94,7 @@ $(function() {
     $thirdChild.removeClass('active');
     $(this).addClass('active');
   });
-  
+
   $thirdChild.on('click', function(){
     var el = $thirdChild;
     changeUnderline(el); //call the changeUnderline function with el as the perameter within the called function
@@ -93,8 +102,8 @@ $(function() {
     $secondChild.removeClass('active');
     $(this).addClass('active');
   });
-  
-  
+
+
   $bouton.on('click', function(){
     $overlay.addClass('visible');
     $mainPopUp.addClass('visible');
@@ -112,21 +121,21 @@ $(function() {
     $overlay.removeClass('visible');
     $mainPopUp.removeClass('visible');
   });
-  
+
   $signIn.on('click', function(){
     $signIn.addClass('active');
     $register.removeClass('active');
     $formSignIn.removeClass('move-left');
     $formRegister.removeClass('move-left');
   });
-  
+
   $register.on('click', function(){
     $signIn.removeClass('active');
     $register.addClass('active');
     $formSignIn.addClass('move-left');
     $formRegister.addClass('move-left');
   });
-  
+
   $('input').on('submit', function(e){
     e.preventDefault(); //used to prevent submission of form...remove for real use
   });
