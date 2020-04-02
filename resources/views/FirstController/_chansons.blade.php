@@ -1,6 +1,6 @@
 <div class="ensemble_musics">
 @foreach($chansons as $c)
-    <div class="music">
+    <div class="music"> 
         <a href="#" data-file="{{$c->url}}" class="chanson">
             <img src="/img/image_musique.png" alt="imagemusique"/>
         </a>

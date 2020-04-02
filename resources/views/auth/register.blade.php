@@ -1,4 +1,4 @@
-<h2>{{ __('Créer un compte') }}</h2>
+
     <div class="infos">
         <form method="POST" action="{{ route('register') }}">
             @csrf
