@@ -35,15 +35,6 @@ $(".bouton_nouvelle_playlist").click(function(){
     }
 })
 
-$(".bouton_nouvelle_playlist").click(function(){
-  let etatplaylist = document.getElementById("nouvelle_playlist").style.display;
-  if(etatplaylist === "flex"){
-      document.getElementById("nouvelle_playlist").style.display = "none";
-  } else {
-      document.getElementById("nouvelle_playlist").style.display = "flex";
-  }
-})
-
 /*Title: Cool Modal Popup Sign In/Out Form*/
 
 $(function() {
