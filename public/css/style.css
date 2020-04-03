@@ -192,12 +192,12 @@ body{
     background-color: #475069;
     padding: 10px 50px;
     border-radius: 20px;
-    font-size: 30px;
+    font-size: 1.8em;
 }
 
 .banniere_ou{
     position: absolute;
-    font-size: 30px;
+    font-size: 2em;
     text-transform: uppercase;
     color: white;
     margin-top: 10px;
@@ -208,7 +208,7 @@ body{
     border-radius: 20px;
     border: none;
     padding: 10px 15px;
-    font-size: 1.7em;
+    font-size: 1.5em;
 }
 
 .listePlaylists{
@@ -218,12 +218,13 @@ body{
     align-items: center;
     width: 50%;
     position: absolute;
-    right: -6em;
-    top: 0;
+    right: -8em;
+    top: 42%;
 }
 
 .ensemble_listPlaylist{
     position: relative;
+    width: 10%;
 }
 
 .listePlaylists a{
@@ -234,21 +235,65 @@ body{
 }
 
 .affichPlaylists{
-    background: #475069;
-    font-family: "coolvetica";
-    font-size: 1.1em;
+    background-image: url('/img/music_ajouter.png');
+    background-color: transparent;
+    background-size: contain;
+    border: none;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+.music-hover{
+    position: absolute;
+    background: rgba(0,0,0,0.7);
+    opacity: 0;
+    top: 0.1px;
+    right: 0.1px;
+    left: 0.1px;
+    bottom: 0.1px;
+    transition: opacity 0ms ease-in-out;
+}
+
+.music-hover .contenu-hover{
+    left: 0;
+    position: absolute;
+    overflow: hidden;
+    transform: translateY(-50%);
+    transition: top 600ms ease-in-out;
+}
+
+.img_music{
+    position: relative;
+}
+
+.img_music:hover .music-hover{
+    opacity: 0.9;
+}
+
+.img_music:hover .contenu-hover{
+    top: 50%;
+}
+
+.contenu-hover{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contenu-hover p{
     color: white;
-    border-radius: 1.5vh;
-    text-align: center;
-    font-weight: normal;
-    width: 10.5vw;
-    height: 3.1vh;
-    border:none;
-    outline:none;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    margin-bottom: 1.2vh;
+}
+
+.img_hover_music{
+    width: 120%;
+}
+
+.lienmusic{
+    width: 20%;
+}
+
+.img_hover_lien{
+    width: 100%;
 }
 
 /* Page search */

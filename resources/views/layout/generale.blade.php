@@ -120,9 +120,8 @@
         </div>
     </div>
         </div> -->
-<!--<audio id="audio" controls>
-</audio>-->
-<footer> Le pied de la page </footer>
+<audio id="audio" controls>
+</audio>
 <script src="/js/divers.js"></script>
 @yield('player')
     </body>
