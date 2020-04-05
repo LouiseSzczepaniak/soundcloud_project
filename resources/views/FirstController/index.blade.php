@@ -10,7 +10,12 @@
     </div>
     <h3 class="titre_section"> Les musiques récemment uplodées </h3>
     <div class="soulignement"></div>
-    @include("FirstController._chansons")
+    <div class="ensemble_musics">
+        @foreach($chansons as $c)
+            @include("FirstController._chansons")
+        @endforeach
+    </div>
+
 @endsection
 
 @section('player')
