@@ -18,16 +18,7 @@
             <h3> Les chansons </h3>
             <div class="ensemble_musics">
             @foreach($chanson as $c)
-                <div class="music">
-                    <a href="#" data-file="{{$c->url}}">
-                        <img src="/img/image_musique.png"/>
-                    </a>
-                    <p class="titre_musique"> {{$c->nom}} </p>
-                    <p class="style_musique"> {{$c->style}} </p>
-                    <p class="psn_upload"> Uplodée par
-                        <a href="/utilisateur/{{$c->utilisateur->id}}">{{$c->utilisateur->name}}</a>
-                    </p>
-                </div>
+                    @include("FirstController._chansons")
             @endforeach
             </div>
         </div>
