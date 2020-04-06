@@ -80,6 +80,8 @@ body{
     background-repeat: no-repeat;
     background-position: center;
     margin-right: 3vw;
+    position:relative;
+    z-index:5;
 }
 
 
@@ -1424,3 +1426,138 @@ html.remodal-is-locked {
     display: inline-block;
   }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .titre_section_playlist h2 {
+    font-family: "coolvetica";
+    font-weight: normal;
+    font-size: 2rem;
+    color: #393539;
+    text-transform: lowercase;
+  }
+
+  .titre-playlist {
+    font-family: "gravity";
+    font-size: 1.5rem;
+    color: #393539;
+    display:flex;
+  }
+
+  .croix {
+    background-image: url('../img/croix.svg');
+    width: 1.5vw;
+    height: 1.5vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: 2vw;
+  }
