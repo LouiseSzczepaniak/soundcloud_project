@@ -44,26 +44,8 @@
                         <div><a href="/playlist/delete/{{$p->id}}" > <div class="croix"></div></a></div></div>
                         <div class="musics_playlist">
                         @foreach($p->chansons as $c)
-                                <div>
-                                    <a href="/playlist/deletechanson/{{$c->id}}/{{$p->id}}"> Supprimer la chanson de la playlsit</a>
-                                    <a href="#" data-file="{{$c->url}}" class="chanson">
-                                        <img src="/img/image_musique.png" alt="imagemusique"/>
-                                    </a>
-                                    <p class="titre_musique"> {{$c->nom}}</p>
-                                    <p class="style_musique"> {{$c->style}}</p>
-                                    <p class="psn_upload"> Uploadée par
-                                        <a href="/utilisateur/{{$c->utilisateur->id}}"> {{$c->utilisateur->name}}
-                                        </a>
-                                    </p>
-
-                                    @auth
-                                        @if(Auth::user()->jeLike->contains($c->id))
-                                            <a data-pjax class="a_like" href="/like/{{$c->id}}"><div class="like"></div></a>
-                                        @else
-                                            <a data-pjax class="a_like" href="/like/{{$c->id}}"><div class="like_hover"></div></a>
-                                        @endif
-                                    @endauth
-                                </div>
+                                <a href="/playlist/deletechanson/{{$c->id}}/{{$p->id}}"> Supprimer la chanson de la playlsit</a>
+                                @include("FirstController._chansons")
                         @endforeach
                         </div>
                     </div>

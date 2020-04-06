@@ -80,7 +80,7 @@ body{
     background-repeat: no-repeat;
     background-position: center;
     margin-right: 3vw;
-    position:relative;
+    position: absolute;
     z-index:5;
 }
 
