@@ -40,8 +40,8 @@
                 </div>
                 @foreach($utilisateur->playlists as $p)
                     <div class="uneplaylist">
-                        <h3> {{$p->name}} </h3>
-                        <a href="/playlist/delete/{{$p->id}}"> Supprimer la playlist </a>
+                        <div class="titre-playlist"><div>{{$p->name}} </div>
+                        <div><a href="/playlist/delete/{{$p->id}}" > <div class="croix"></div></a></div></div>
                         <div class="musics_playlist">
                         @foreach($p->chansons as $c)
                                 <div>
