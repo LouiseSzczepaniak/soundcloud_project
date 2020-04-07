@@ -1,7 +1,7 @@
 <div class="music">
     <div class="img_music">
-        <img src="/img/image_musique.png" alt="imagemusique" class="img-music-playlist"/>
-
+      <!--  <img src="/img/image_musique.png" alt="imagemusique" class="img-music-playlist"/>-->
+        @include("FirstController._svg")
         <div class="music-hover">
             <div class="contenu-hover">
                 @auth
