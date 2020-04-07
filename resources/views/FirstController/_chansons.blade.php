@@ -1,6 +1,6 @@
 <div class="music">
     <div class="img_music">
-        <img src="/img/image_musique.png" alt="imagemusique"/>
+        <img src="/img/image_musique.png" alt="imagemusique" class="img-music-playlist"/>
 
         <div class="music-hover">
             <div class="contenu-hover">

@@ -16,13 +16,14 @@
         </a>
         @auth
         <div class="icons">
-            <a href="/utilisateur/{{Auth::id()}}" class="myaccount"></a>
-        </div>
-        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+            <a href="/utilisateur/{{Auth::id()}}"><div class="myaccount"></div></a>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
             @csrf
         </form>
-        <a class="logout" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+        <a onclick="event.preventDefault();document.getElementById('logout-form').submit();"><div class="logout"></div>
         </a>
+        </div>
+        
        @endauth
 </nav>
 
