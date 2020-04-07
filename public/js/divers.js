@@ -1,3 +1,17 @@
+function onglet(x) {
+    if(x == 1) {
+        document.querySelector("#playlists").classList.add('is-visible');
+        document.querySelector("#playlists").classList.remove('is-invisible');
+        document.querySelector("#chansons_uploadees").classList.remove('is-visible');
+    }
+    if(x == 2) {
+        document.querySelector("#playlists").classList.remove('is-visible');
+        document.querySelector("#playlists").classList.add('is-invisible');
+        document.querySelector("#chansons_uploadees").classList.add('is-visible');
+    }
+}
+        
+        
 $(document).ready(function(){
     $("a.chanson").click(function(e){
         e.preventDefault();

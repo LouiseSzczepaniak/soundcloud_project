@@ -28,16 +28,21 @@
 
             <div class="playlists">
                 <div class="titre_section_playlist">
-                    <h2> Playlists</h2>
-                    <p class="bouton_nouvelle_playlist"> Créer une playlist </p>
+                   <div class="title1" onclick="onglet(1)">Playlists</div>
+                    <div class="title2" onclick="onglet(2)">Chansons uploadées</div>
+                    
+                       
+                           
+                </div>
+                <div class="playlists" id="playlists">
+              <div class="flex">  <div class="bouton_nouvelle_playlist"> Créer une playlist </div>
                     <div class="nouvelle_playlist" id="nouvelle_playlist">
                         <form action="/playlist/create" method="POST" enctype="multipart/form-data">
                             @csrf
                             <input type="text" name="name" required placeholder="Le nom de la playlist" value="{{old('name')}}"/> <br/>
                             <input type="submit" value="Créer" />
                         </form>
-                    </div>
-                </div>
+                  </div></div>
                 @foreach($utilisateur->playlists as $p)
                     <div class="uneplaylist">
                         <div class="titre-playlist"><div>{{$p->name}} </div>
@@ -51,6 +56,7 @@
                     </div>
                 @endforeach
             </div>
+                <div class="chansons_uploadees" id="chansons_uploadees">CONTENU DES MUSIQUES UPLOADEES</div></div>
         </div>
     </div>
 @endsection
