@@ -243,7 +243,7 @@ body{
 
 .music-hover{
     position: absolute;
-    background: rgba(0,0,0,0.7);
+    background: rgba(255,255,255,0.7);
     opacity: 0;
     top: 0.1px;
     right: 0.1px;
@@ -292,6 +292,10 @@ body{
 
 .img_hover_lien{
     width: 100%;
+}
+
+#égaliseur .rectDebutCache{
+    visibility: hidden;
 }
 
 /* Page search */
