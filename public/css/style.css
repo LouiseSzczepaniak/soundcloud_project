@@ -114,7 +114,7 @@ body{
 }
 
 .music{
-    flex-basis: 50%; 
+    flex-basis: 50%;
 }
 
 .titre_musique{
@@ -304,6 +304,10 @@ body{
     visibility: hidden;
 }
 
+svg{
+    width: 40%;
+}
+
 /* Page search */
 .resultat_search{
     margin-top: 200px;
@@ -422,7 +426,7 @@ body{
 .titre_section_playlist div {
     width: 50%;
     text-align: center;
-    
+
 }
 
 .titre_section_playlist div:hover {
@@ -473,7 +477,7 @@ body{
         margin-top: 0.5rem;
     margin-left: 0.5rem;
 
-   
+
 }
 
 .nouvelle_playlist form{
@@ -496,7 +500,7 @@ body{
     font-family: "gravity";
     border:none;
     margin-left: 0.5rem;
-    
+
 }
 
 
