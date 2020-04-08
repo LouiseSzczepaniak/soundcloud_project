@@ -127,28 +127,38 @@ var albums = ['Dawn'];
 var trackNames = ['Skylike - Dawn'];
 var trackUrl = ['https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/2.mp3'];
 
+var playerTrack,
+    bgArtwork, bgArtworkUrl,
+    albumName, trackName,
+    albumArt, sArea, seekBar,
+    trackTime, insTime, sHover,
+    playPauseButton,  i,
+    tProgress, tTime , seekT, seekLoc, seekBarPos, cM, ctMinutes, ctSeconds, curMinutes, curSeconds, durMinutes, durSeconds, playProgress, bTime, nTime = 0, buffInterval = null, tFlag = false,
+    albumArtworks = ['_1'],
+    playPreviousTrackButton,
+    playNextTrackButton, currIndex = -1;
 
-$(function()
-{
-    var playerTrack = $("#player-track"),
+
+
+$(function() {
+    playerTrack = $("#player-track"),
         bgArtwork = $('#bg-artwork'), bgArtworkUrl,
         albumName = $('#album-name'), trackName = $('#track-name'),
         albumArt = $('#album-art'), sArea = $('#s-area'), seekBar = $('#seek-bar'),
         trackTime = $('#track-time'), insTime = $('#ins-time'), sHover = $('#s-hover'),
-        playPauseButton = $("#play-pause-button"),  i = playPauseButton.find('i'),
+        playPauseButton = $("#play-pause-button"), i = playPauseButton.find('i'),
         tProgress = $('#current-time'), tTime = $('#track-length'), seekT, seekLoc, seekBarPos, cM, ctMinutes, ctSeconds, curMinutes, curSeconds, durMinutes, durSeconds, playProgress, bTime, nTime = 0, buffInterval = null, tFlag = false,
         albumArtworks = ['_1'],
         playPreviousTrackButton = $('#play-previous'),
         playNextTrackButton = $('#play-next'), currIndex = -1;
-
+});
 function selectTrack(flag)
 {
-    console.log("AA", trackUrl);
     if( flag == 0 || flag == 1 )
         ++currIndex;
     else
         --currIndex;
-    if( (currIndex > -1) && (currIndex < albumArtworks.length) )
+    if( (currIndex > -1) && (currIndex < trackUrl.length) )
     {
         if( flag == 0 )
             i.attr('class','fa fa-play');
@@ -374,14 +384,12 @@ function selectTrack(flag)
         playNextTrackButton.on('click',function(){ selectTrack(1);});
     }
 
+    $(document).ready(function() {
     initPlayer();
 
     $("a.chanson").click(function(e){
         e.preventDefault();
-        let url = $(this).attr('data-file');
-        trackUrl[0] = url;
-        albums[0] = $(this).attr('data-name');
-        currIndex = -1;
+        currIndex = $(this).attr("data-nb") - 1;
         selectTrack(1);
 
     })

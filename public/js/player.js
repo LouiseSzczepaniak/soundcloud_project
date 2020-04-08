@@ -1,7 +1,6 @@
 
 $(document).ready(function() {
    var nb = 0;
-    console.log(albums);
     trackUrl = [];
     albums = [];
     $("a.chanson").each(function() {
@@ -10,6 +9,6 @@ $(document).ready(function() {
         albums.push($(this).attr('data-name'));
         nb++;
     });
+    currIndex = -1;
     selectTrack(0);
-    //console.log(albums, trackUrl);
 });
