@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <script src="/js/jquery.js"></script>
     <script src="/js/popup.js"></script>
+    <script src="/js/divers.js"></script>
+
 </head>
 
 <nav class="menu_principal">
@@ -73,7 +75,6 @@
 <div id="main">
     @yield('contenu')
 </div>
-<!--
 <div id='all'>
     <div id="app-cover">
 
@@ -120,10 +121,7 @@
             </div>
         </div>
     </div>
-        </div> -->
-<audio id="audio" controls>
-</audio>
-<script src="/js/divers.js"></script>
+        </div>
 @yield('player')
     </body>
 </html>
