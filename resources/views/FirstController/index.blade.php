@@ -16,6 +16,8 @@
         @endforeach
     </div>
 
+    <script src="/js/player.js"></script>
+
 @endsection
 
 @section('player')
