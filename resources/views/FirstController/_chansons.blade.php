@@ -12,7 +12,7 @@
                         <a data-pjax class="a_like" href="/like/{{$c->id}}"><div class="like_hover"></div></a>
                     @endif
                 @endauth
-                <a href="#" data-file="{{$c->url}}" data-id="{{$c->id}}" class="chanson lienmusic">
+                <a href="#" data-file="{{$c->url}}" data-name="{{$c->nom}}" data-id="{{$c->id}}" class="chanson lienmusic">
                     <img src="/img/music_play.png" class="img_hover_lien"  alt="play_music"/>
                 </a>
                     @auth
