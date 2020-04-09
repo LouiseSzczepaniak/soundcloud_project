@@ -12,8 +12,6 @@
 */
 
 Route::get('/', 'FirstController@index');
-Route::get('/about', 'FirstController@about');
-/*Route::get('/article/{id}', 'FirstController@article')->where('id', '[0-9]+');*/
 
 Route::get('/utilisateur/{id}', 'FirstController@utilisateur')->where('id', '[0-9]+');
 
@@ -36,4 +34,4 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/like/{id}', 'FirstController@like')->where ('id','[0-9]+')->middleware('auth');
+Route::get('/like/{id}', 'FirstController@like')->where('id','[0-9]+')->middleware('auth');
