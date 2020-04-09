@@ -11,18 +11,7 @@ function onglet(x) {
     }
 }
 
-$(document).ready(function(){
-    $("a.chanson").click(function(e){
-        e.preventDefault();
-        let url = $(this).attr('data-file');
-        console.log(url);
-        let audio = $('#audio');
-        audio[0].src = url;
-        audio[0].play();
-        let id = $(this).attr('data-id');
-        $("#egaliseur"+id+">g>rect").removeClass("rectDebutCache");
-    })
-})
+
 
 $(document).ready(function(){
     $('#searchform').submit(function(e){
@@ -423,6 +412,9 @@ function selectTrack(flag)
         e.preventDefault();
         currIndex = $(this).attr("data-nb") - 1;
         selectTrack(1);
+        let id = $(this).attr('data-id');
+        $("#egaliseur"+id+">g>rect").removeClass("rectDebutCache");
 
     })
 });
+
