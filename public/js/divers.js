@@ -20,6 +20,8 @@ $(document).ready(function(){
         let audio = $('#audio');
         audio[0].src = url;
         audio[0].play();
+        let id = $(this).attr('data-id');
+        $("#egaliseur"+id+">g>rect").removeClass("rectDebutCache");
     })
 })
 
