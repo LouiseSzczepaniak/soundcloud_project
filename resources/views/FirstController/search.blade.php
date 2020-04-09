@@ -1,15 +1,15 @@
 @extends('layout.generale')
 @section('contenu')
     <div class="resultat_search">
+        <h3> Les utilisateurs </h3>
         <div class="resultat_psn">
-            <h3> Les utilisateurs </h3>
             @foreach($users as $u)
-                <div>
+                <div class="unepersonne_search">
                     <a href="/utilisateur/{{$u->id}}" class="name_search">{{$u->name}}</a>
                     <div class="infos_psn_search">
+                        <p> {{$u->jeLesSuit()->count()}} abonnements </p>
+                        <p> {{$u->ilsMeSuivent()->count()}} abonnés </p>
                         <p> {{$u->chansons()->count()}} chansons uploadées </p>
-                        <p> Il suit {{$u->jeLesSuit()->count()}} personnes </p>
-                        <p> Il est suivi par {{$u->ilsMeSuivent()->count()}} personnes </p>
                     </div>
                 </div>
             @endforeach
@@ -23,6 +23,5 @@
             </div>
         </div>
     </div>
-
 
 @endsection
