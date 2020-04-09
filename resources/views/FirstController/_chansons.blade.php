@@ -1,7 +1,6 @@
 <div style="display: none;" class="nbListePlaylist" id="{{$c->count()}}"/></div>
 <div class="music">
     <div class="img_music">
-      <!--  <img src="/img/image_musique.png" alt="imagemusique" class="img-music-playlist"/>-->
         @include("FirstController._svg")
         <div class="music-hover">
             <div class="contenu-hover">
