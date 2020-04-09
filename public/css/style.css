@@ -248,6 +248,7 @@ body{
     background-repeat: no-repeat;
     width: 140%;
     height: 2.6vh;
+    cursor: pointer;
 }
 
 .music{
