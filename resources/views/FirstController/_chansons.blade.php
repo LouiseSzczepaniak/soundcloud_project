@@ -1,3 +1,4 @@
+<div style="display: none;" class="nbListePlaylist" id="{{$c->count()}}"/></div>
 <div class="music">
     <div class="img_music">
       <!--  <img src="/img/image_musique.png" alt="imagemusique" class="img-music-playlist"/>-->
@@ -26,7 +27,7 @@
         @auth
             <div class="listePlaylists" id="listePlaylists{{$c->id}}">
                 @foreach(Auth::user()->playlists as $p)
-                    <a href="/ajouterplaylist/{{$c->id}}/{{$p->id}}"> {{$p->name}}</a><br/>
+                    <a href="/ajouterplaylist/{{$c->id}}/{{$p->id}}"> {{$p->name}}</a>
                 @endforeach
             </div>
         @endauth
