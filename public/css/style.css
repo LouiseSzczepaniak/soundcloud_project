@@ -108,13 +108,10 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    width: 70%;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
-}
-
-.music{
-    flex-basis: 50%;
+    margin-top: 4vh;
 }
 
 .titre_musique{
@@ -122,6 +119,7 @@ body{
     font-family: "coolvetica";
     font-size: 1.2em;
     color: #393539;
+    margin-bottom: 0.8vh;
 }
 
 .titre_section{
@@ -219,7 +217,7 @@ body{
     align-items: center;
     width: 50%;
     position: absolute;
-    right: -8em;
+    right: -5em;
     top: 42%;
 }
 
@@ -241,7 +239,12 @@ body{
     background-size: contain;
     border: none;
     background-repeat: no-repeat;
-    width: 100%;
+    width: 140%;
+    height: 2.6vh;
+}
+
+.music{
+    margin-bottom: 2vh;
 }
 
 .music-hover{
@@ -250,11 +253,13 @@ body{
     opacity: 0;
     top: 0.1px;
     right: 0.1px;
-    left:9rem;
+    left:0;
     bottom: 0.1px;
     transition: opacity 0ms ease-in-out;
-    width: 47%;
     overflow:hidden;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .music-hover .contenu-hover{
@@ -271,7 +276,7 @@ body{
 }
 
 .img_music:hover .music-hover{
-    opacity: 0.9;
+    opacity: 0.95;
 }
 
 .img_music:hover .contenu-hover{
