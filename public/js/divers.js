@@ -12,16 +12,7 @@ function onglet(x) {
 }
         
         
-$(document).ready(function(){
-    $("a.chanson").click(function(e){
-        e.preventDefault();
-        let url = $(this).attr('data-file');
-        console.log(url);
-        let audio = $('#audio');
-        audio[0].src = url;
-        audio[0].play();
-    })
-})
+
 
 $(document).ready(function(){
     $('#searchform').submit(function(e){
@@ -177,6 +168,7 @@ $(function() {
 });
 function selectTrack(flag)
 {
+    console.log(trackUrl, currIndex);
     if( flag == 0 || flag == 1 )
         ++currIndex;
     else
