@@ -1022,7 +1022,13 @@ html, body, * {
 
   .oubliepassword{
       margin-left: 2em;
+      text-decoration: none;
+      color: black;
   }
+
+.oubliepassword:hover{
+    color: #8E9FBB;
+}
 
   form.sign-in.move-left {
     opacity: 0;
@@ -1042,13 +1048,12 @@ html, body, * {
     margin: 5px 5% 30px 5%;
     padding: 10px;
     font-size: 1em;
-    color: #ceaee8;
     outline: none;
     border: none;
   }
 
   form.sign-in input[type="password"]{
-      margin-bottom: 0;
+      margin-bottom: 0.6em;
   }
 
   form.sign-in input[type="checkbox"]{
@@ -1102,7 +1107,6 @@ html, body, * {
     margin: 5px 5% 15px 5%;
     padding: 10px;
     font-size: 1em;
-    color: #ceaee8;
     outline: none;
     border: none;
   }
