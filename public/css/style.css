@@ -325,7 +325,6 @@ svg{
 
 /* Page search */
 .resultat_search{
-    margin-top: 200px;
     width: 70%;
     margin-left: auto;
     margin-right: auto;
@@ -333,10 +332,17 @@ svg{
 
 .resultat_psn{
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.unepersonne_search{
+    display: flex;
+    flex-direction: column;
 }
 
 .resultat_psn div{
-    width: 70%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -351,17 +357,16 @@ svg{
     color: #ebf0f7;
 }
 
-.infos_psn_search{
-    display: flex;
-    justify-content: space-around;
-}
-
 .resultat_chansons{
     margin-top: 50px;
 }
 
-.resultat_chansons h3{
+.resultat_search h3{
     text-align: center;
+}
+
+.unepersonne_search{
+    display: flex;
 }
 
 
