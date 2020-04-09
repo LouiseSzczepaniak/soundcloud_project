@@ -218,8 +218,11 @@ body{
     align-items: center;
     width: 50%;
     position: absolute;
-    right: -5em;
+    right: -5.2em;
     top: 42%;
+    border: 0.1em solid #8E9FBB;
+    border-radius: 0.2em;
+    z-index: 50;
 }
 
 .ensemble_listPlaylist{
@@ -232,6 +235,9 @@ body{
     color: white;
     font-size: 0.9em;
     padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    border-bottom: 0.1em solid #8E9FBB;
+    width: 100%;
 }
 
 .affichPlaylists{
