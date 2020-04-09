@@ -1,3 +1,4 @@
+<div style="display: none;" class="nbListePlaylist" id="{{$c->count()}}"/></div>
 <div class="music">
     <div class="img_music">
       <!--  <img src="/img/image_musique.png" alt="imagemusique" class="img-music-playlist"/>-->
@@ -11,7 +12,7 @@
                         <a data-pjax class="a_like" href="/like/{{$c->id}}"><div class="like_hover"></div></a>
                     @endif
                 @endauth
-                <a href="#" data-file="{{$c->url}}" data-name='{{$c->nom}}'class="chanson lienmusic">
+                <a href="#" data-file="{{$c->url}}" data-name="{{$c->nom}}" data-id="{{$c->id}}" class="chanson lienmusic">
                     <img src="/img/music_play.png" class="img_hover_lien"  alt="play_music"/>
                 </a>
                     @auth
@@ -26,7 +27,7 @@
         @auth
             <div class="listePlaylists" id="listePlaylists{{$c->id}}">
                 @foreach(Auth::user()->playlists as $p)
-                    <a href="/ajouterplaylist/{{$c->id}}/{{$p->id}}"> {{$p->name}}</a><br/>
+                    <a href="/ajouterplaylist/{{$c->id}}/{{$p->id}}"> {{$p->name}}</a>
                 @endforeach
             </div>
         @endauth

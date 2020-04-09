@@ -10,9 +10,19 @@ function onglet(x) {
         document.querySelector("#chansons_uploadees").classList.add('is-visible');
     }
 }
-        
-        
 
+$(document).ready(function(){
+    $("a.chanson").click(function(e){
+        e.preventDefault();
+        let url = $(this).attr('data-file');
+        console.log(url);
+        let audio = $('#audio');
+        audio[0].src = url;
+        audio[0].play();
+        let id = $(this).attr('data-id');
+        $("#egaliseur"+id+">g>rect").removeClass("rectDebutCache");
+    })
+})
 
 $(document).ready(function(){
     $('#searchform').submit(function(e){
@@ -22,12 +32,19 @@ $(document).ready(function(){
 })
 
 $(".affichPlaylists").click(function(){
-    let nb = $(this).parent('div').attr('id');
+    let nb = parseInt($(this).parent('div').attr('id'));
+    let nbTotal = $(".nbListePlaylist").attr('id');
     let etat = document.getElementById("listePlaylists"+nb).style.display;
-    if(etat === "flex"){
-        document.getElementById("listePlaylists"+nb).style.display = "none";
-    } else {
-        document.getElementById("listePlaylists"+nb).style.display = "flex";
+    for(let i=1; i <nbTotal; i++){
+        if(i === nb){
+            if(etat === "flex"){
+                document.getElementById("listePlaylists"+nb).style.display = "none";
+            } else {
+                document.getElementById("listePlaylists"+nb).style.display = "flex";
+            }
+        } else{
+            document.getElementById("listePlaylists"+i).style.display = "none";
+        }
     }
 })
 

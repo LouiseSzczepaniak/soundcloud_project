@@ -16,13 +16,6 @@ class FirstController extends Controller
         /*$c = Chanson::find(1);*/
         return view('FirstController.index', ["chansons" => $chansons]);
     }
-    public function about(){
-        return view('FirstController.about');
-    }
-
-    public function article($id){
-        return view('FirstController.article', ['id' => $id, 'nom' => 'Gilles']);
-    }
 
     public function utilisateur($id){
         $u = User::findOrFail($id);
