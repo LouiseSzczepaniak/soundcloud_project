@@ -9,7 +9,7 @@
     <script src="/js/jquery.js"></script>
     <script src="/js/popup.js"></script>
     <script src="/js/divers.js"></script>
-
+    <script src="/js/donneesplayer.js"></script>
 </head>
 
 <nav class="menu_principal">
@@ -25,7 +25,7 @@
         <a onclick="event.preventDefault();document.getElementById('logout-form').submit();"><div class="logout"></div>
         </a>
         </div>
-        
+
        @endauth
 </nav>
 
@@ -123,5 +123,6 @@
     </div>
         </div>
 @yield('player')
+        <script src="/js/divers.js"></script>
     </body>
 </html>
