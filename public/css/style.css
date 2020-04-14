@@ -323,6 +323,15 @@ svg{
     width: 40%;
 }
 
+/* Animation svg*/
+.firstVague{
+    visibility: hidden;
+}
+
+.secondVague{
+    visibility: hidden;
+}
+
 /* Page search */
 .resultat_search{
     width: 70%;

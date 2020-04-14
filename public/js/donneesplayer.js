@@ -1,3 +1,105 @@
+function playEgaliseur(){
+    for(let i=1; i <17; i++){
+        $("#egaliseur"+currIndex+">g>.rect"+i).removeClass("rectDebutCache");
+    }
+
+    for(let j=16; j>11; j--){
+        $("#egaliseur"+currIndex+">#pic1>.rect"+j).addClass("firstVague");
+    }
+
+    for(let j=16; j>14; j--){
+        $("#egaliseur"+currIndex+">#pic2>.rect"+j).addClass("firstVague");
+    }
+
+    for(let j=16; j>15; j--){
+        $("#egaliseur"+currIndex+">#pic3>.rect"+j).addClass("firstVague");
+    }
+
+    for(let j=16; j>9; j--){
+        $("#egaliseur"+currIndex+">#pic4>.rect"+j).addClass("firstVague");
+    }
+
+    for(let j=16; j>11; j--){
+        $("#egaliseur"+currIndex+">#pic5>.rect"+j).addClass("firstVague");
+    }
+
+    for(let j=16; j>12; j--){
+        $("#egaliseur"+currIndex+">#pic6>.rect"+j).addClass("firstVague");
+    }
+
+    for(let j=16; j>16; j--){
+        $("#egaliseur"+currIndex+">#pic7>.rect"+j).addClass("firstVague");
+    }
+
+    for(let j=16; j>14; j--){
+        $("#egaliseur"+currIndex+">#pic8>.rect"+j).addClass("firstVague");
+    }
+
+    for(let j=16; j>10; j--){
+        $("#egaliseur"+currIndex+">#pic9>.rect"+j).addClass("firstVague");
+    }
+
+    for(let j=16; j>16; j--){
+        $("#egaliseur"+currIndex+">#pic10>.rect"+j).addClass("firstVague");
+    }
+
+    for(let j=16; j>12; j--){
+        $("#egaliseur"+currIndex+">#pic11>.rect"+j).addClass("firstVague");
+    }
+
+    for(let j=16; j>13; j--){
+        $("#egaliseur"+currIndex+">#pic12>.rect"+j).addClass("firstVague");
+    }
+}
+
+function pauseEgaliseur(){
+    for(let i=1; i<13; i++){
+        for(let j=1; j<17;j++){
+            $("#egaliseur"+currIndex+">#pic"+i+">.rect"+j).removeClass("firstVague");
+        }
+    }
+    $("#egaliseur"+currIndex+">#pic10>.rect16").addClass("rectDebutCache");
+
+    for(let i=16; i>9;i--){
+        $("#egaliseur"+currIndex+">#pic1>.rect"+i).addClass("rectDebutCache");
+    }
+
+    for(let i=16; i>12; i--){
+        $("#egaliseur"+currIndex+">#pic2>.rect"+i).addClass("rectDebutCache");
+    }
+
+    for(let i=16; i>10; i--){
+        $("#egaliseur"+currIndex+">#pic3>.rect"+i).addClass("rectDebutCache");
+        $("#egaliseur"+currIndex+">#pic11>.rect"+i).addClass("rectDebutCache");
+    }
+
+    for(let i=16; i>15; i--){
+        $("#egaliseur"+currIndex+">#pic5>.rect"+i).addClass("rectDebutCache");
+    }
+
+    for(let i=16; i>8; i--){
+        $("#egaliseur"+currIndex+">#pic6>.rect"+i).addClass("rectDebutCache");
+    }
+
+    for(let i=16; i>13; i--){
+        $("#egaliseur"+currIndex+">#pic7>.rect"+i).addClass("rectDebutCache");
+    }
+
+    for(let i=16; i>9; i--){
+        $("#egaliseur"+currIndex+">#pic8>.rect"+i).addClass("rectDebutCache");
+    }
+
+    for(let i=16; i>11; i--){
+        $("#egaliseur"+currIndex+">#pic9>.rect"+i).addClass("rectDebutCache");
+    }
+
+    for(let i=16; i>5; i--){
+        $("#egaliseur"+currIndex+">#pic12>.rect"+i).addClass("rectDebutCache");
+    }
+
+
+}
+
 var albums = ['Dawn'];
 var trackNames = ['Skylike - Dawn'];
 var trackUrl = ['https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/2.mp3'];
@@ -30,6 +132,7 @@ $(function() {
 function selectTrack(flag)
 {
     console.log(trackUrl, currIndex);
+
     if( flag == 0 || flag == 1 )
         ++currIndex;
     else
@@ -64,6 +167,8 @@ function selectTrack(flag)
             audio.play();
             playerTrack.addClass('active');
             albumArt.addClass('active');
+            playEgaliseur();
+
 
             clearInterval(buffInterval);
             checkBuffering();
@@ -77,6 +182,7 @@ function selectTrack(flag)
         bgArtworkUrl = $('#'+currArtwork).attr('src');
 
         bgArtwork.css({'background-image':'url('+bgArtworkUrl+')'});
+
     }
     else
     {
@@ -97,6 +203,7 @@ function playPause()
         {
             playerTrack.addClass('active');
             albumArt.addClass('active');
+            playEgaliseur();
             checkBuffering();
             i.attr('class','fas fa-pause');
             audio.play();
@@ -105,6 +212,7 @@ function playPause()
         {
             playerTrack.removeClass('active');
             albumArt.removeClass('active');
+            pauseEgaliseur();
             clearInterval(buffInterval);
             albumArt.removeClass('buffering');
             i.attr('class','fas fa-play');
@@ -217,6 +325,7 @@ function updateCurrTime()
         seekBar.width(0);
         tProgress.text('00:00');
         albumArt.removeClass('buffering').removeClass('active');
+        $("#egaliseur"+currIndex+">g>rect").addClass("rectDebutCache");
         clearInterval(buffInterval);
     }
 }
@@ -267,8 +376,7 @@ $(document).ready(function() {
         e.preventDefault();
         currIndex = $(this).attr("data-nb") - 1;
         selectTrack(1);
-        let id = $(this).attr('data-id');
-        $("#egaliseur"+id+">g>rect").removeClass("rectDebutCache");
+
 
     })
 });
