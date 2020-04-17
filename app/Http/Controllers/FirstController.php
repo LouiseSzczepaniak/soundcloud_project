@@ -102,7 +102,8 @@ class FirstController extends Controller
     public function search($s){
         $users = User::whereRaw("name like concat('%',?, '%')", [$s])->orderBy('created_at', 'desc')->get();
         $chanson = Chanson::whereRaw("nom like concat('%',?, '%')", [$s])->orderBy('nom', 'asc')->get();
-        return view('FirstController.search', ['users'=>$users, 'chanson'=>$chanson]);
+        $element = $s;
+        return view('FirstController.search', ['users'=>$users, 'chanson'=>$chanson, 'element'=>$element]);
     }
 
     public function jeLike($id) {
