@@ -23,7 +23,9 @@ body{
 
 
 
-/* Sur toutes les pages */
+/************************/
+/*Sur toutes les pages***/
+/************************/
 
 .menu_principal{
     font-family: 'coolvetica';
@@ -54,7 +56,11 @@ body{
     left: 3vw;
     top: 1vh;
 }
-/* Pop up connexion / deconnexion */
+
+/************************/
+/*Pop up connexion / deconnexion*/
+/************************/
+
 .modal{
     display: none;
     width: 50%;
@@ -103,8 +109,9 @@ body{
 }
 
 
-
-/* Page accueil */
+/************************/
+/*******Accueil**********/
+/************************/
 .ensemble_musics{
     font-family: "gravity";
     display: flex;
@@ -323,7 +330,9 @@ svg{
     width: 40%;
 }
 
-/* Animation svg*/
+/************************/
+/*****Animation svg******/
+/************************/
 .firstVague{
     visibility: hidden;
 }
@@ -332,7 +341,21 @@ svg{
     visibility: hidden;
 }
 
-/* Page search */
+
+/************************/
+/****Résultat search*****/
+/************************/
+.title_resultSearch{
+    text-align: center;
+    font-family: "gravity";
+    font-size: 2.2rem;
+}
+
+.title_search{
+    font-family: "gravity";
+    font-size: 1.8rem;
+}
+
 .resultat_search{
     width: 70%;
     margin-left: auto;
@@ -351,35 +374,59 @@ svg{
     flex-direction: column;
 }
 
-.resultat_psn div{
+.avatar_search{
+    background-image: url('../img/avatar_test.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+.linkAvatar{
+    width: 5vw;
+    height: 8vh;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 0.5rem;
+}
+
+.infos_psn_search p{
+    margin-bottom: 0;
+    margin-top: 0.4rem;
+    color: #475069;
+}
+
+.resultat_psn > div{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    font-family: "gravity";
 }
 
 .name_search{
     text-decoration: none;
-    color: #475069;
+    color:#393539;
     font-weight: bold;
+    text-align: center;
+    font-size: 1.2rem;
 }
 
 .name_search:hover{
-    color: #ebf0f7;
+    color: #c3cee1;
 }
 
 .resultat_chansons{
     margin-top: 50px;
 }
 
-.resultat_search h3{
-    text-align: center;
-}
-
 .unepersonne_search{
     display: flex;
 }
 
-
-/* Page utilisateur */
+/************************/
+/****Utilisateur page****/
+/************************/
 .utilisateur {
     display:flex;
 }
