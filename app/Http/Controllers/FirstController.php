@@ -50,6 +50,13 @@ class FirstController extends Controller
         return redirect('/utilisateur/'. Auth::id());
     }
 
+    public function supprimerchanson($id){
+        $c = Chanson::find($id);
+        if($c->user_id != Auth::id()) abort(404);
+        $c->delete();
+        return redirect('/utilisateur/'. Auth::id());
+    }
+
     public function supprimerchansonplaylist($chanson_id, $playlist_id){
         $p = Playlist::find($playlist_id);
         $p->chansons()->detach($chanson_id);

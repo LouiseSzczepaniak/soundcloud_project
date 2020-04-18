@@ -17,6 +17,7 @@ Route::get('/utilisateur/{id}', 'FirstController@utilisateur')->where('id', '[0-
 
 Route::get('/chanson/nouvelle', 'FirstController@nouvellechanson')->middleware('auth');
 Route::post('/chanson/create', 'FirstController@creerchanson')->middleware('auth');
+Route::get('/chanson/delete/{id}', 'FirstController@supprimerchanson')->where('id', '[0-9]+')->middleware('auth');
 
 Route::get('/suivre/{id}', 'FirstController@suivre')->where('id', '[0-9]+')->middleware('auth');
 
