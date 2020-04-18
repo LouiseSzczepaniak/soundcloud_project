@@ -1612,3 +1612,235 @@ html.remodal-is-locked {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* UPLOAD D'UNE CHANSON */
+.new_chanson {
+    width: 80vw;
+    margin:auto;
+    text-align: center;
+}
+.new_chanson_text {
+    width: 20vw;
+    border: none;
+    border-radius: 1rem;
+    border: 1px solid #ebf0f7;
+    padding: 0.5rem;
+    margin-top: 10vh;
+    font-family: "gravity";
+    outline: none;
+}
+
+.new_chanson_upload {
+    width: 20vw;
+    border: none;
+    border-radius: 1rem;
+    border: 1px solid #ebf0f7;
+    padding: 0.5rem;
+    margin-top: 2vh;
+    font-family: "gravity";
+    outline: none;
+}
+
+.new_chanson_style {
+    width: 20vw;
+    border: none;
+    border-radius: 1rem;
+    border: 1px solid #ebf0f7;
+    padding: 0.5rem;
+    margin-top: 2vh;
+    font-family: "gravity";
+    outline: none;
+}
+
+.new_chanson_submit {
+    width: 10vw;
+    border: none;
+    border-radius: 1rem;
+    background: #c3cee1;
+    padding: 0.5rem;
+    margin-top: 2vh;
+    font-family: "gravity";
+    outline: none;
+}
+
