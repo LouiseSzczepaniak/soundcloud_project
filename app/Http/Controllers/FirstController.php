@@ -50,6 +50,13 @@ class FirstController extends Controller
         return redirect('/utilisateur/'. Auth::id());
     }
 
+    public function supprimerchanson($id){
+        $c = Chanson::find($id);
+        if($c->user_id != Auth::id()) abort(404);
+        $c->delete();
+        return redirect('/utilisateur/'. Auth::id());
+    }
+
     public function supprimerchansonplaylist($chanson_id, $playlist_id){
         $p = Playlist::find($playlist_id);
         $p->chansons()->detach($chanson_id);
@@ -102,7 +109,8 @@ class FirstController extends Controller
     public function search($s){
         $users = User::whereRaw("name like concat('%',?, '%')", [$s])->orderBy('created_at', 'desc')->get();
         $chanson = Chanson::whereRaw("nom like concat('%',?, '%')", [$s])->orderBy('nom', 'asc')->get();
-        return view('FirstController.search', ['users'=>$users, 'chanson'=>$chanson]);
+        $element = $s;
+        return view('FirstController.search', ['users'=>$users, 'chanson'=>$chanson, 'element'=>$element]);
     }
 
     public function jeLike($id) {
