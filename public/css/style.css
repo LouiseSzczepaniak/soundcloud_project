@@ -482,6 +482,23 @@ svg{
 .is-invisible {
     display:none;
 }
+
+.light-color {
+    color: #393539!important;
+    background: #8e9fbb!important;
+    transition: all 0.5s ease;
+}
+
+.dark-color {
+    background: #475069!important;
+    color: white!important;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+}
+
 .playlists h2{
     text-align: center;
 }
@@ -513,10 +530,13 @@ svg{
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all 0.5s ease;
 }
 
 .title2 {
     color: #393539;
+    background: #8e9fbb;
+    transition: all 0.5s ease;
 }
 
 .bouton_nouvelle_playlist{
@@ -882,13 +902,14 @@ html, body, * {
   .container {
   }
 
+  .valider {
+      text-align: center;
+  }
   button {
     position: relative;
-    left: 45%;
+    margin: auto;
     top: 3vh;
     width: 20vw;
-    margin: -35px 0 0 -130px;
-    padding: 15px 30px;
     border-radius: 2vh;
     background-color: #475069;
     color: #fff;
@@ -934,7 +955,7 @@ html, body, * {
     top: 20vh;
     margin: 0;
     width: 100%;
-    height: 500px;
+    height: 50vh;
     background-color: #ebf0f7;
     border-radius: 5px;
     z-index: 15;
@@ -1057,7 +1078,7 @@ html, body, * {
   }
 
   .popup-content {
-    height: 400px;
+    height: 50vw;
     background: #ebf0f7;
 
   }
