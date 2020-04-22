@@ -1,3 +1,5 @@
+
+
 function onglet(x) {
     if(x == 1) {
         document.querySelector("#playlists").classList.add('is-visible');
@@ -144,3 +146,19 @@ $(function() {
     e.preventDefault(); //used to prevent submission of form...remove for real use
   });
 });
+
+/* MENU */
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    document.querySelector('#menu').classList.add('small-menu');
+    document.querySelector('.logo').classList.add('small-logo');
+    document.querySelector('.login').classList.add('small-icon');
+  } else {
+    document.querySelector('#menu').classList.remove('small-menu');
+    document.querySelector('.logo').classList.remove('small-logo');
+    document.querySelector('.login').classList.remove('small-icon');
+  }
+}
+/* FIN MENU */

@@ -12,7 +12,7 @@
     <script src="/js/donneesplayer.js"></script>
 </head>
 
-<nav class="menu_principal">
+<nav class="menu_principal" id="menu">
         <a href="/">
             <div class="logo"></div>
         </a>
