@@ -85,4 +85,5 @@
             </div>
         </div>
     </div>
+    <script src="/js/player.js"></script>
 @endsection

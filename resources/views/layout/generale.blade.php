@@ -6,7 +6,10 @@
     <title> LISTEN & UPLOAD </title>
     <link type="text/css" rel="stylesheet" href="/css/style.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-   
+    <script src="/js/jquery.js"></script>
+    <script src="/js/divers.js"></script>
+    <script src="/js/popup.js"></script>
+    <script src="/js/donneesplayer.js"></script>
 </head>
 
 <nav class="menu_principal" id="menu">
@@ -120,9 +123,6 @@
     </div>
         </div>
 @yield('player')
-        <script src="/js/divers.js"></script>
-        <script src="/js/jquery.js"></script>
-        <script src="/js/popup.js"></script>
-        <script src="/js/donneesplayer.js"></script>
+
     </body>
 </html>
