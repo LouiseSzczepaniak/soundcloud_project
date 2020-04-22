@@ -70,7 +70,6 @@ function pauseEgaliseur(){
 
     for(let i=16; i>10; i--){
         $("#egaliseur"+currIndex+">#pic3>.rect"+i).addClass("rectDebutCache");
-        $("#egaliseur"+currIndex+">#pic11>.rect"+i).addClass("rectDebutCache");
     }
 
     for(let i=16; i>15; i--){
@@ -365,8 +364,8 @@ function initPlayer()
 
     $(audio).on('timeupdate',updateCurrTime);
 
-    playPreviousTrackButton.on('click',function(){ selectTrack(-1);} );
-    playNextTrackButton.on('click',function(){ selectTrack(1);});
+    playPreviousTrackButton.on('click',function(){ pauseEgaliseur(); selectTrack(-1);} );
+    playNextTrackButton.on('click',function(){ pauseEgaliseur(); selectTrack(1);});
 }
 
 $(document).ready(function() {
@@ -374,6 +373,14 @@ $(document).ready(function() {
 
     $("a.chanson").click(function(e){
         e.preventDefault();
+
+        currIndex = $(this).attr("data-nb") - 1;
+        for(let i=0; i <15; i++){
+            if(i!= currIndex){
+                currIndex = i;
+                pauseEgaliseur();
+            }
+        }
         currIndex = $(this).attr("data-nb") - 1;
         selectTrack(1);
 
