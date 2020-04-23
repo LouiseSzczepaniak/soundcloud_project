@@ -7,6 +7,7 @@
     font-family: "gravity";
     src: url("/fonts/gravity/Gravity-Regular.otf");
 }
+
 .fas{
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
@@ -15,10 +16,20 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 body{
     margin: 0;
     font-family: Helvetica, Arial;
     background-color:  #fff;
+}
+
+:root{
+    --violetFonce : #475069;
+    --violetClair : #8e9fbb;
+    --grisFonce : #393539;
+    --grisClair : #9a9a9a;
+    --beigeBlanc : #ebf0f7;
+    --blancClair : #c3cee1;
 }
 
 
@@ -29,7 +40,7 @@ body{
 
 .menu_principal{
     font-family: 'coolvetica';
-    background-color: #475069;
+    background-color: var(--violetFonce);
     list-style-type: none;
     height: 10vh;
     width: 100vw;
@@ -141,14 +152,14 @@ body{
     text-align: center;
     font-family: "coolvetica";
     font-size: 1.2em;
-    color: #393539;
+    color: var(--grisFonce);
     margin-bottom: 0.8vh;
     margin-top: 0.4vh;
 }
 
 .titre_section{
     font-family: "coolvetica";
-    color: #393539;
+    color: var(--grisFonce);
     font-weight: normal;
     font-size:3em;
     width: 60vw;
@@ -160,7 +171,7 @@ body{
 .soulignement{
     width: 65vw;
     height: 1vh;
-    background: linear-gradient(to right, #8e9fbb, #c3cee1);
+    background: linear-gradient(to right, var(--violetClair), var(--blancClair));
     margin: auto;
 }
 
@@ -176,16 +187,16 @@ body{
 
 .style_musique, .psn_upload{
     text-align: center;
-    color: #475069;
+    color: var(--violetFonce);
 }
 
 .psn_upload a{
     text-decoration: none;
-    color: #393539;
+    color: var(--grisFonce);
 }
 
 .psn_upload a:hover{
-    color: #ebf0f7;
+    color: var(--beigeBlanc);
 }
 
 .like {
@@ -213,7 +224,7 @@ body{
 .nouvelle_chanson{
     text-decoration: none;
     color: white;
-    background-color: #475069;
+    background-color: var(--violetFonce);
     padding: 10px 50px;
     border-radius: 20px;
     font-size: 1.8em;
@@ -237,14 +248,14 @@ body{
 
 .listePlaylists{
     display: none;
-    background-color: #c3cee1;
+    background-color: var(--blancClair);
     flex-direction: column;
     align-items: center;
     width: 50%;
     position: absolute;
     right: -5.2em;
     top: 42%;
-    border: 0.1em solid #8E9FBB;
+    border: 0.1em solid var(--violetClair);
     border-radius: 0.2em;
     z-index: 50;
 }
@@ -260,7 +271,7 @@ body{
     font-size: 0.9em;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
-    border-bottom: 0.1em solid #8E9FBB;
+    border-bottom: 0.1em solid var(--violetClair);
     width: 100%;
 }
 
@@ -467,7 +478,7 @@ svg{
 .infos_psn_search p{
     margin-bottom: 0;
     margin-top: 0.4rem;
-    color: #475069;
+    color: var(--violetFonce);
 }
 
 .resultat_psn > div{
@@ -479,14 +490,14 @@ svg{
 
 .name_search{
     text-decoration: none;
-    color:#393539;
+    color: var(--grisFonce);
     font-weight: bold;
     text-align: center;
     font-size: 1.2rem;
 }
 
 .name_search:hover{
-    color: #c3cee1;
+    color: var(--blancClair);
 }
 
 .resultat_chansons{
@@ -519,7 +530,7 @@ svg{
 }
 
 .suivre {
-    background: #475069;
+    background: var(--violetFonce);
     font-family: "coolvetica";
     font-size: 1.1em;
     color: white;
@@ -535,7 +546,7 @@ svg{
 }
 
 .pseudo {
-    color: #393539;
+    color: var(--grisFonce);
     font-family: "coolvetica";
     font-size: 2em;
     font-weight: normal;
@@ -543,7 +554,7 @@ svg{
 
 .playlists{
     width: 80vw;
-    background: #c3cee1;
+    background: var(--blancClair);
     display: block;
 }
 
@@ -560,13 +571,13 @@ svg{
 }
 
 .light-color {
-    color: #393539!important;
-    background: #8e9fbb!important;
+    color: var(--grisFonce)!important;
+    background: var(--violetClair)!important;
     transition: all 0.5s ease;
 }
 
 .dark-color {
-    background: #475069!important;
+    background: var(--violetFonce)!important;
     color: white!important;
     height: 10vh;
     display: flex;
@@ -582,7 +593,7 @@ svg{
 .titre_section_playlist{
     display: flex;
     height: 10vh;
-    background: #8e9fbb;
+    background: var(--violetClair);
     font-family: "coolvetica";
     font-size: 2rem;
     justify-content: center;
@@ -600,7 +611,7 @@ svg{
     cursor:pointer;
 }
 .title1 {
-    background: #475069;
+    background: var(--violetFonce);
     color: white;
     height: 10vh;
     display: flex;
@@ -610,13 +621,13 @@ svg{
 }
 
 .title2 {
-    color: #393539;
-    background: #8e9fbb;
+    color: var(--grisFonce);
+    background: var(--violetClair);
     transition: all 0.5s ease;
 }
 
 .bouton_nouvelle_playlist{
-    background: #475069;
+    background: var(--violetFonce);
     font-family: "coolvetica";
     font-size: 1.2em;
     color: white;
@@ -663,7 +674,7 @@ svg{
 }
 
 .nouvelle_playlist input[type="submit"]{
-   background: #475069;
+   background: var(--violetFonce);
     height: 2rem;
     border-radius: 0.5em;
     color: white;
@@ -987,7 +998,7 @@ html, body, * {
     top: 3vh;
     width: 20vw;
     border-radius: 2vh;
-    background-color: #475069;
+    background-color: var(--violetFonce);
     color: #fff;
     font-family: "coolvetica";
     text-transform: lowercase;
@@ -1004,7 +1015,7 @@ html, body, * {
 
   button:hover {
     opacity 0.8;
-    box-shadow: 0 2px 5px #9a9a9a;
+    box-shadow: 0 2px 5px var(--grisClair);
   }
 
   .overlay {
@@ -1032,7 +1043,7 @@ html, body, * {
     margin: 0;
     width: 100%;
     height: 50vh;
-    background-color: #ebf0f7;
+    background-color: var(--beigeBlanc);
     border-radius: 5px;
     z-index: 15;
     opacity: 0;
@@ -1084,7 +1095,7 @@ html, body, * {
     top: 0;
     width: 3px;
     height: 25px;
-    background-color: #475069;
+    background-color: var(--violetFonce);
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
@@ -1099,7 +1110,7 @@ html, body, * {
     top: 0;
     width: 3px;
     height: 25px;
-    background-color: #475069;
+    background-color: var(--violetFonce);
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
@@ -1128,34 +1139,34 @@ html, body, * {
   }
 
   #sign-in {
-    background-color: #475069;
-    color: #ebf0f7;
+    background-color: var(--violetFonce);
+    color: var(--beigeBlanc);
     border-radius: 5px 0 0 0;
     font-family: "coolvetica";
     text-transform: lowercase;
   }
 
   #sign-in.active {
-    color: #393539;
-    background-color: #ebf0f7;
+    color: var(--grisFonce);
+    background-color: var(--beigeBlanc);
   }
 
   #register {
-    background-color: #475069;
-    color: #ebf0f7;
+    background-color: var(--violetFonce);
+    color: var(--beigeBlanc);
     border-radius: 0 5px 0 0;
     font-family: "coolvetica";
     text-transform: lowercase;
   }
 
   #register.active {
-    color: #393539;
-    background-color: #ebf0f7;
+    color: var(--grisFonce);
+    background-color: var(--beigeBlanc);
   }
 
   .popup-content {
     height: 50vw;
-    background: #ebf0f7;
+    background: var(--beigeBlanc);
 
   }
 
@@ -1178,7 +1189,7 @@ html, body, * {
   }
 
 .oubliepassword:hover{
-    color: #8E9FBB;
+    color: var(--violetClair);
 }
 
   form.sign-in.move-left {
@@ -1188,7 +1199,7 @@ html, body, * {
 
   form label {
     font-size: 1.1em;
-    color: #393539;
+    color: var(--grisFonce);
     margin-left: 23px;
   }
 
@@ -1361,7 +1372,7 @@ html, body, * {
     right: 15px;
     left: 15px;
     padding: 13px 22px 10px 184px;
-    background-color: #475069;
+    background-color: var(--violetFonce);
     border-radius: 15px 15px 0 0;
     transition: 0.3s ease top;
     z-index: 1;
@@ -1376,14 +1387,14 @@ html, body, * {
 
 #album-name
 {
-    color: #ebf0f7;
+    color: var(--beigeBlanc);
     font-size: 17px;
     font-family: "gravity";
 }
 
 #track-name
 {
-    color: #ebf0f7;
+    color: var(--beigeBlanc);
     font-size: 13px;
     margin: 2px 0 13px 0;
 }
@@ -1416,7 +1427,7 @@ html, body, * {
 
 #track-time.active #current-time, #track-time.active #track-length
 {
-    color: #ebf0f7;
+    color: var(--beigeBlanc);
     background-color: transparent;
     font-family: "gravity";
 }
@@ -1430,7 +1441,7 @@ html, body, * {
 
 #s-area
 {
-    background-color:#EBF0F7;
+    background-color: var(--beigeBlanc);
     cursor: pointer;
 }
 
@@ -1469,7 +1480,7 @@ html, body, * {
     bottom: 0;
     left: 0;
     width: 0;
-    background-color: #8E9FBB;
+    background-color: var(--violetClair);
     transition: 0.2s ease width;
     z-index: 1;
 }
@@ -1478,7 +1489,7 @@ html, body, * {
 {
     position: relative;
     height: 100%;
-    background-color: #475069;
+    background-color: var(--violetFonce);
     box-shadow: 0 30px 80px #656565;
     /* border-radius: 15px; */
     z-index: 2;
@@ -1722,7 +1733,7 @@ html.remodal-is-locked {
     font-family: "coolvetica";
     font-weight: normal;
     font-size: 2rem;
-    color: #393539;
+    color: var(--grisFonce);
     text-transform: lowercase;
       width: 20%;
   }
@@ -1730,7 +1741,7 @@ html.remodal-is-locked {
   .titre-playlist {
     font-family: "gravity";
     font-size: 1.5rem;
-    color: #393539;
+    color: var(--grisFonce);
     display:flex;
       padding: 1rem;
   }
@@ -1960,9 +1971,8 @@ html.remodal-is-locked {
 }
 .new_chanson_text {
     width: 20vw;
-    border: none;
     border-radius: 1rem;
-    border: 1px solid #ebf0f7;
+    border: 1px solid var(--beigeBlanc);
     padding: 0.5rem;
     margin-top: 10vh;
     font-family: "gravity";
@@ -1971,9 +1981,8 @@ html.remodal-is-locked {
 
 .new_chanson_upload {
     width: 20vw;
-    border: none;
     border-radius: 1rem;
-    border: 1px solid #ebf0f7;
+    border: 1px solid var(--beigeBlanc);
     padding: 0.5rem;
     margin-top: 2vh;
     font-family: "gravity";
@@ -1982,9 +1991,8 @@ html.remodal-is-locked {
 
 .new_chanson_style {
     width: 20vw;
-    border: none;
     border-radius: 1rem;
-    border: 1px solid #ebf0f7;
+    border: 1px solid var(--beigeBlanc);
     padding: 0.5rem;
     margin-top: 2vh;
     font-family: "gravity";
@@ -1995,7 +2003,7 @@ html.remodal-is-locked {
     width: 10vw;
     border: none;
     border-radius: 1rem;
-    background: #c3cee1;
+    background: var(--blancClair);
     padding: 0.5rem;
     margin-top: 2vh;
     font-family: "gravity";
@@ -2008,7 +2016,7 @@ html.remodal-is-locked {
 
 /* GLITCH 404 */
 .bck-error {
-    background-color: #ebf0f7;
+    background-color: var(--beigeBlanc);
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -2017,7 +2025,7 @@ html.remodal-is-locked {
     align-content: center;
 }
 .glitch_word_box h1 {
-    color: #475069;
+    color: var(--violetFonce);
     font-weight: normal;
     font-size: 5em;
     margin: 0;
