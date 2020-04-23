@@ -207,7 +207,7 @@ body{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-top: 5vh;
+    margin-top: 10vh;
 }
 
 .nouvelle_chanson{
@@ -356,10 +356,68 @@ svg{
     visibility: hidden;
 }
 
+/************************/
+/**Animation apparition**/
+/************************/
+
+.content {
+    overflow: hidden;
+    position: relative;
+}
+
+@keyframes toRight {
+    0% { opacity: 0; transform: translateX(-40%); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes toLeft {
+    0% { opacity: 0; transform: translateX(40%); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes toUp {
+    0% { opacity: 0; transform: translateY(40px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes toScale {
+    0% { opacity: 0; transform: scale(0.6); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+.content__to-left,
+.content__to-right,
+.content__to-up,
+.content__to-scale {
+    opacity: 0;
+}
+
+.content .content__to-left {
+    animation: toLeft 0.5s ease-in-out forwards;
+    animation-delay: 0.3s;
+}
+
+.content .content__to-right {
+    animation: toRight 0.5s ease-in-out forwards;
+    animation-delay: 0.3s;
+}
+.content .content__to-up {
+    animation: toUp 0.5s ease-in-out forwards;
+    animation-delay: 0.3s;
+}
+.content .content__to-scale {
+    animation: toScale 0.5s ease-in-out forwards;
+    animation-delay: 0.3s;
+}
+
 
 /************************/
 /****Résultat search*****/
 /************************/
+.search{
+    margin-top: 12vh;
+}
+
 .title_resultSearch{
     text-align: center;
     font-family: "gravity";
