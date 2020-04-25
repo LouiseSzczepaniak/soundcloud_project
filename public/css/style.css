@@ -588,6 +588,10 @@ svg{
 .light-color {
     color: var(--grisFonce)!important;
     background: var(--violetClair)!important;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: all 0.5s ease;
 }
 
@@ -608,7 +612,6 @@ svg{
 .titre_section_playlist{
     display: flex;
     height: 10vh;
-    background: var(--violetClair);
     font-family: "coolvetica";
     font-size: 2rem;
     justify-content: center;
@@ -639,6 +642,10 @@ svg{
     color: var(--grisFonce);
     background: var(--violetClair);
     transition: all 0.5s ease;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .bouton_nouvelle_playlist{
@@ -2159,4 +2166,8 @@ html.remodal-is-locked {
      25% { top: -3px; left: -2px;	}
      50% { top: 1px; left: 4px; }
     100% { top: -1px; left: -1px; }
+}
+
+.top {
+    margin-top: -13vh;
 }
