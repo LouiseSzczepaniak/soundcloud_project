@@ -76,7 +76,7 @@
                             @if(Auth::id() == $utilisateur->id)
                                 <a href="/chanson/delete/{{$c->id}}"> Supprimer la chanson </a>
                             @endif
-                            @include("FirstController._chansons")
+                            @include("FirstController._chansonsuploadees")
                         </div>
 
                     @endforeach

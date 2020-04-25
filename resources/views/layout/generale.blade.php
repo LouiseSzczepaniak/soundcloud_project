@@ -7,7 +7,7 @@
     <link type="text/css" rel="stylesheet" href="/css/style.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <script src="/js/jquery.js"></script>
-    <script src="/js/divers.js"></script>
+
     <script src="/js/popup.js"></script>
     <script src="/js/donneesplayer.js"></script>
 </head>
@@ -122,6 +122,7 @@
         </div>
     </div>
         </div>
+        <script src="/js/divers.js"></script>
 @yield('player')
 
     </body>
