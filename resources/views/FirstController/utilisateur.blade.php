@@ -60,7 +60,7 @@
                             <div class="musics_playlist">
                                 @foreach($p->chansons as $c)
                                     @if(Auth::id() == $utilisateur->id)
-                                        <a href="/playlist/deletechanson/{{$c->id}}/{{$p->id}}"> Supprimer la chanson de la playlist</a>
+                                        <a href="/playlist/deletechanson/{{$c->id}}/{{$p->id}}"> <div class="croix top"></div></a>
                                     @endif
                                     @include("FirstController._chansons")
                                 @endforeach
@@ -70,11 +70,11 @@
                 </div>
 
                 <div class="chansons_uploadees" id="chansons_uploadees">
-                    CONTENU DES MUSIQUES UPLOADEES
+                    
                     @foreach($utilisateur->chansons as $c)
                         <div class="ensemble_musics">
                             @if(Auth::id() == $utilisateur->id)
-                                <a href="/chanson/delete/{{$c->id}}"> Supprimer la chanson </a>
+                                <a href="/chanson/delete/{{$c->id}}"> <div class="croix"></div> </a>
                             @endif
                             @include("FirstController._chansonsuploadees")
                         </div>

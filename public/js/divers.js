@@ -5,12 +5,14 @@ function onglet(x) {
         document.querySelector("#playlists").classList.add('is-visible');
         document.querySelector(".title1").classList.add('dark-color');
         document.querySelector(".title2").classList.remove('dark-color');
+        document.querySelector(".title2").classList.add('light-color');
         document.querySelector("#playlists").classList.remove('is-invisible');
         document.querySelector("#chansons_uploadees").classList.remove('is-visible');
     }
     if(x == 2) {
         document.querySelector("#playlists").classList.remove('is-visible');
         document.querySelector(".title2").classList.add('dark-color');
+        document.querySelector(".title1").classList.remove('dark-color');
         document.querySelector(".title1").classList.add('light-color');
         document.querySelector("#playlists").classList.add('is-invisible');
         document.querySelector("#chansons_uploadees").classList.add('is-visible');
