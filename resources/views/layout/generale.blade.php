@@ -94,12 +94,9 @@
             </div>
             <div id="player-content">
                 <div id="album-art">
-                    <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_1.jpg" class="active" id="_1">
-                    <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_2.jpg" id="_2">
-                    <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_3.jpg" id="_3">
-                    <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_4.jpg" id="_4">
-                    <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_5.jpg" id="_5">
-                    <div id="buffer-box">Buffering ...</div>
+                    <div class="imgTrack active" id="_1"></div>
+                    <div class="fondTrack"></div>
+                    <div id="buffer-box"></div>
                 </div>
                 <div id="player-controls">
                     <div class="control">

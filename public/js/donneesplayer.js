@@ -3,59 +3,121 @@ function playEgaliseur(){
         $("#egaliseur"+currIndex+">g>.rect"+i).removeClass("rectDebutCache");
     }
 
-    for(let j=16; j>11; j--){
-        $("#egaliseur"+currIndex+">#pic1>.rect"+j).addClass("firstVague");
+    function firstVague(){
+        for(let j=16; j>11; j--){
+            $("#egaliseur"+currIndex+">#pic1>.rect"+j).addClass("firstVague");
+        }
+
+        for(let j=16; j>14; j--){
+            $("#egaliseur"+currIndex+">#pic2>.rect"+j).addClass("firstVague");
+        }
+
+        for(let j=16; j>15; j--){
+            $("#egaliseur"+currIndex+">#pic3>.rect"+j).addClass("firstVague");
+        }
+
+        for(let j=16; j>9; j--){
+            $("#egaliseur"+currIndex+">#pic4>.rect"+j).addClass("firstVague");
+        }
+
+        for(let j=16; j>11; j--){
+            $("#egaliseur"+currIndex+">#pic5>.rect"+j).addClass("firstVague");
+        }
+
+        for(let j=16; j>12; j--){
+            $("#egaliseur"+currIndex+">#pic6>.rect"+j).addClass("firstVague");
+        }
+
+        for(let j=16; j>16; j--){
+            $("#egaliseur"+currIndex+">#pic7>.rect"+j).addClass("firstVague");
+        }
+
+        for(let j=16; j>14; j--){
+            $("#egaliseur"+currIndex+">#pic8>.rect"+j).addClass("firstVague");
+        }
+
+        for(let j=16; j>10; j--){
+            $("#egaliseur"+currIndex+">#pic9>.rect"+j).addClass("firstVague");
+        }
+
+        for(let j=16; j>16; j--){
+            $("#egaliseur"+currIndex+">#pic10>.rect"+j).addClass("firstVague");
+        }
+
+        for(let j=16; j>12; j--){
+            $("#egaliseur"+currIndex+">#pic11>.rect"+j).addClass("firstVague");
+        }
+
+        for(let j=16; j>13; j--){
+            $("#egaliseur"+currIndex+">#pic12>.rect"+j).addClass("firstVague");
+        }
     }
 
-    for(let j=16; j>14; j--){
-        $("#egaliseur"+currIndex+">#pic2>.rect"+j).addClass("firstVague");
+    function secondVague(){
+        for(let i=1; i <17; i++){
+            $("#egaliseur"+currIndex+">g>.rect"+i).removeClass("firstVague");
+        }
+
+        for(let j=16; j>16; j--){
+            $("#egaliseur"+currIndex+">#pic1>.rect"+j).addClass("secondVague");
+        }
+
+        for(let j=16; j>10; j--){
+            $("#egaliseur"+currIndex+">#pic2>.rect"+j).addClass("secondVague");
+        }
+
+        for(let j=16; j>8; j--){
+            $("#egaliseur"+currIndex+">#pic3>.rect"+j).addClass("secondVague");
+        }
+
+        for(let j=16; j>4; j--){
+            $("#egaliseur"+currIndex+">#pic4>.rect"+j).addClass("secondVague");
+        }
+
+        for(let j=16; j>9; j--){
+            $("#egaliseur"+currIndex+">#pic5>.rect"+j).addClass("secondVague");
+        }
+
+        for(let j=16; j>16; j--){
+            $("#egaliseur"+currIndex+">#pic6>.rect"+j).addClass("secondVague");
+        }
+
+        for(let j=16; j>12; j--){
+            $("#egaliseur"+currIndex+">#pic7>.rect"+j).addClass("secondVague");
+        }
+
+        for(let j=16; j>11; j--){
+            $("#egaliseur"+currIndex+">#pic8>.rect"+j).addClass("secondVague");
+        }
+
+        for(let j=16; j>16; j--){
+            $("#egaliseur"+currIndex+">#pic9>.rect"+j).addClass("secondVague");
+        }
+
+        for(let j=16; j>8; j--){
+            $("#egaliseur"+currIndex+">#pic10>.rect"+j).addClass("secondVague");
+        }
+
+        for(let j=16; j>6; j--){
+            $("#egaliseur"+currIndex+">#pic11>.rect"+j).addClass("secondVague");
+        }
+
+        for(let j=16; j>16; j--){
+            $("#egaliseur"+currIndex+">#pic12>.rect"+j).addClass("secondVague");
+        }
     }
 
-    for(let j=16; j>15; j--){
-        $("#egaliseur"+currIndex+">#pic3>.rect"+j).addClass("firstVague");
-    }
+    firstVague();
+    setTimeout(secondVague(), 50000);
 
-    for(let j=16; j>9; j--){
-        $("#egaliseur"+currIndex+">#pic4>.rect"+j).addClass("firstVague");
-    }
-
-    for(let j=16; j>11; j--){
-        $("#egaliseur"+currIndex+">#pic5>.rect"+j).addClass("firstVague");
-    }
-
-    for(let j=16; j>12; j--){
-        $("#egaliseur"+currIndex+">#pic6>.rect"+j).addClass("firstVague");
-    }
-
-    for(let j=16; j>16; j--){
-        $("#egaliseur"+currIndex+">#pic7>.rect"+j).addClass("firstVague");
-    }
-
-    for(let j=16; j>14; j--){
-        $("#egaliseur"+currIndex+">#pic8>.rect"+j).addClass("firstVague");
-    }
-
-    for(let j=16; j>10; j--){
-        $("#egaliseur"+currIndex+">#pic9>.rect"+j).addClass("firstVague");
-    }
-
-    for(let j=16; j>16; j--){
-        $("#egaliseur"+currIndex+">#pic10>.rect"+j).addClass("firstVague");
-    }
-
-    for(let j=16; j>12; j--){
-        $("#egaliseur"+currIndex+">#pic11>.rect"+j).addClass("firstVague");
-    }
-
-    for(let j=16; j>13; j--){
-        $("#egaliseur"+currIndex+">#pic12>.rect"+j).addClass("firstVague");
-    }
 }
+
+
 
 function pauseEgaliseur(){
     for(let i=1; i<13; i++){
         for(let j=1; j<17;j++){
-            $("#egaliseur"+currIndex+">#pic"+i+">.rect"+j).removeClass("firstVague");
+            $("#egaliseur"+currIndex+">#pic"+i+">.rect"+j).removeClass("firstVague secondVague");
         }
     }
     $("#egaliseur"+currIndex+">#pic10>.rect16").addClass("rectDebutCache");

@@ -367,6 +367,21 @@ svg{
     visibility: hidden;
 }
 
+.imgTrack{
+    background-image: url('../img/logo2.png');
+    width: 8vw;
+    height: 8vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+.fondTrack{
+    width: 100%;
+    height: 100%;
+    background-color: #af8b8b;
+}
 /************************/
 /**Animation apparition**/
 /************************/
@@ -1533,7 +1548,7 @@ html, body, * {
     z-index: 2;
 }
 
-#album-art img
+#album-art .imgTrack
 {
     display: block;
     position: absolute;
@@ -1545,13 +1560,13 @@ html, body, * {
     z-index: -1;
 }
 
-#album-art img.active
+#album-art .imgTrack.active
 {
     opacity: 1;
     z-index: 1;
 }
 
-#album-art.active img.active
+#album-art.active .imgTrack.active
 {
     z-index: 1;
     animation: rotateAlbumArt 3s linear 0s infinite forwards;
@@ -1583,17 +1598,17 @@ html, body, * {
     z-index: 2;
 }
 
-#album-art img, #buffer-box
+#album-art .imgTrack, #buffer-box
 {
     transition: 0.1s linear all;
 }
 
-#album-art.buffering img
+#album-art.buffering .imgTrack
 {
     opacity: 0.25;
 }
 
-#album-art.buffering img.active
+#album-art.buffering .imgTrack.active
 {
     opacity: 0.8;
     filter: blur(2px);
