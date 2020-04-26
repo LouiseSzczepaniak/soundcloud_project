@@ -143,11 +143,16 @@ body{
     font-family: "gravity";
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    width: 80%;
+    width: 80vw;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
     margin: 4vh auto 15vh auto;
 }
 
+.ensemble_musics > div {
+    width:20vw;
+}
 .titre_musique{
     text-align: center;
     font-family: "coolvetica";
@@ -571,6 +576,7 @@ svg{
     width: 80vw;
     background: var(--blancClair);
     display: block;
+    min-height: 100vh;
 }
 
 .chansons_uploadees {
@@ -1775,7 +1781,18 @@ html.remodal-is-locked {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    margin-left: 2vw;
+    margin: auto;
+  }
+
+  .play2 {
+    background-image: url('../img/play2.svg');
+    width: 1.5vw;
+    height: 1.5vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: auto;
+    margin-bottom: 3vh;
   }
 
 .img-music-playlist {
