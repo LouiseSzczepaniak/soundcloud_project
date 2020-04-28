@@ -361,6 +361,61 @@ svg{
     width: 40%;
 }
 
+@media screen and (max-width: 1000px) {
+    .banniere_accueil {
+        flex-direction: column;
+    }
+
+    .formulaire_recherche{
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    .banniere_ou{
+        margin-top: 0;
+    }
+
+    .titre_section{
+        text-align: center;
+    }
+
+
+    .img_music .music-hover{
+        opacity: 0.95;
+    }
+
+    .img_music .contenu-hover{
+        top: 50%;
+    }
+
+    .affichPlaylists{
+        height: 2vh;
+    }
+
+    .like_hover{
+        width: 3vw!important;
+        height: 3vh!important;
+    }
+
+    .like{
+        width: 3vw;
+        height: 3vh;
+    }
+
+    .listePlaylists{
+        width: 100%;
+        font-size: 1rem;
+        right: 0;
+        top: 3.1rem;
+    }
+
+    .ensemble_listPlaylist{
+        width: 14%;
+    }
+}
+
 @media screen and (max-width: 700px){
     .banniere_accueil{
         height: 18vh;
@@ -405,37 +460,25 @@ svg{
     .style_musique, .psn_upload{
         font-size: 0.6rem;
     }
+
+    .like{
+        width: 4vw;
+        height: 4vh;
+    }
+
+    .like_hover{
+        width: 4vw!important;
+        height: 4vh!important;
+    }
+
+    .listePlaylists{
+        top: 2.5rem;
+        width: 90%;
+        font-size: 0.8rem;
+    }
+
 }
 
-@media screen and (max-width: 1000px) {
-    .banniere_accueil {
-        flex-direction: column;
-    }
-
-    .formulaire_recherche{
-        width: 100%;
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-    }
-
-    .banniere_ou{
-        margin-top: 0;
-    }
-
-    .titre_section{
-        text-align: center;
-    }
-
-
-    .img_music .music-hover{
-        opacity: 0.95;
-    }
-
-    .img_music .contenu-hover{
-        top: 50%;
-    }
-}
 
 /************************/
 /*****Animation svg******/
@@ -1871,41 +1914,38 @@ html.remodal-is-locked {
     display: inline-block;
   }
 
-  @media screen and (max-width: 700px){
-      #player{
-          height: 60%;
-      }
-
-      #album-art{
-          width: 70px;
-          height: 70px;
-          margin-left: 20px;
-          margin-top: 0.8rem;
-      }
-
-      .button{
-          padding: 15px;
-      }
-
-      .control{
-          padding: 0;
-      }
-
-      #player-track{
-          padding: 13px 22px 10px 20px;
-          width: 66vw;
-          text-align: center;
-      }
-  }
-
 @media screen and (max-width: 1000px) {
     #player-track{
         padding: 13px 22px 10px 20px;
     }
 }
 
+@media screen and (max-width: 700px){
+    #player{
+        height: 60%;
+    }
 
+    #album-art{
+        width: 70px;
+        height: 70px;
+        margin-left: 20px;
+        margin-top: 0.8rem;
+    }
 
+    .button{
+        padding: 15px;
+    }
+
+    .control{
+        padding: 0;
+    }
+
+    #player-track{
+        padding: 13px 22px 10px 20px;
+        width: 66vw;
+        text-align: center;
+    }
+}
 
   .titre_section_playlist h2 {
     font-family: "coolvetica";
