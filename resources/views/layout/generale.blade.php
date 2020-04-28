@@ -48,10 +48,10 @@
                 <div class="popup-header">
                     <ul>
                       <li>
-                          <a href="#" id="sign-in">Sign In</a>
+                          <a href="#" id="sign-in">Se connecter</a>
                       </li>
                       <li>
-                          <a href="#" id="register">Register</a>
+                          <a href="#" id="register">Créer un compte</a>
                       </li>
                     </ul>
                 </div><!--.popup-header-->
