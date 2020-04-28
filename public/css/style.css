@@ -439,21 +439,7 @@ svg{
     visibility: hidden;
 }
 
-.imgTrack{
-    background-image: url('../img/logo2.png');
-    width: 8vw;
-    height: 8vh;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    position: relative;
-}
 
-.fondTrack{
-    width: 100%;
-    height: 100%;
-    background-color: #af8b8b;
-}
 /************************/
 /**Animation apparition**/
 /************************/
@@ -1601,7 +1587,7 @@ html, body, * {
     margin-left: 40px;
     transform: rotateZ(0);
     transition: 0.3s ease all;
-    box-shadow: 0 0 0 10px #fff;
+    box-shadow: 0 0 0 5px #fff;
     border-radius: 50%;
     overflow: hidden;
 }
@@ -1746,6 +1732,23 @@ html, body, * {
     color: #fff;
 }
 
+.imgTrack{
+    background-image: url('../img/logo2.png');
+    width: 8vw;
+    height: 8vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+.fondTrack{
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    background-color: var(--blancClair);
+}
+
 html.remodal-is-locked {
     overflow: hidden;
 
@@ -1820,6 +1823,39 @@ html.remodal-is-locked {
     /* Disable Anti-FOUC */
     display: inline-block;
   }
+
+  @media screen and (max-width: 700px){
+      #player{
+          height: 60%;
+      }
+
+      #album-art{
+          width: 70px;
+          height: 70px;
+          margin-left: 20px;
+          margin-top: 0.8rem;
+      }
+
+      .button{
+          padding: 15px;
+      }
+
+      .control{
+          padding: 0;
+      }
+
+      #player-track{
+          padding: 13px 22px 10px 20px;
+          width: 66vw;
+          text-align: center;
+      }
+  }
+
+@media screen and (max-width: 1000px) {
+    #player-track{
+        padding: 13px 22px 10px 20px;
+    }
+}
 
 
 
