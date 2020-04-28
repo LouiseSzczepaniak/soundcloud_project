@@ -10,9 +10,10 @@
         @endauth
 
     </div>
-    
-    <a href="#" data-file="{{$c->url}}" data-name="{{$c->nom}}" data-id="{{$c->id}}">
-        <div class="play2"></div>
+
+    <a href="#" data-file="{{$c->url}}" data-name="{{$c->nom}}" data-id="{{$c->id}}" class="chanson">
+        <div class="play2 affichElement" id="playUpload{{$c->id}}"></div>
+        <div class="pause2 affichPasElement" id="pauseUpload{{$c->id}}"></div>
     </a>
     <p class="titre_musique"> {{$c->nom}}</p>
     <p class="style_musique"> {{$c->style}}</p>

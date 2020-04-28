@@ -71,16 +71,21 @@
 
                 <div class="chansons_uploadees" id="chansons_uploadees">
                 <div class="ensemble_musics">
+                    @php
+                        $index = 0;
+                    @endphp
                     @foreach($utilisateur->chansons as $c)
-                        
-                        <div>
-                            @if(Auth::id() == $utilisateur->id)
-                               <a href="/chanson/delete/{{$c->id}}"> <div class="croix"></div> </a>
-                            @endif
-                            @include("FirstController._chansonsuploadees")
-                            </div>
-                        
-
+                        <div class="indexUpload" id="{{$index}}">
+                            <div>
+                                @if(Auth::id() == $utilisateur->id)
+                                   <a href="/chanson/delete/{{$c->id}}"> <div class="croix"></div> </a>
+                                @endif
+                                @include("FirstController._chansonsuploadees")
+                                </div>
+                            @php
+                                $index++;
+                            @endphp
+                        </div>
                     @endforeach
                     </div>
                 </div>
