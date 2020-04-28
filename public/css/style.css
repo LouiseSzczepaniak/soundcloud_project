@@ -426,6 +426,15 @@ svg{
     .titre_section{
         text-align: center;
     }
+
+
+    .img_music .music-hover{
+        opacity: 0.95;
+    }
+
+    .img_music .contenu-hover{
+        top: 50%;
+    }
 }
 
 /************************/
@@ -1402,6 +1411,44 @@ html, body, * {
     outline:none;
     border-radius: 1vh;
   }
+
+ @media screen and (max-width: 1000px) {
+     button{
+         width: 30vw;
+     }
+ }
+
+@media screen and (max-width: 700px) {
+    .main-popup{
+        height: 70vh;
+    }
+
+    form.sign-in{
+        top: 60px;
+    }
+
+    form.sign-in input{
+        margin: 5px 5% 15px 5%;
+    }
+
+    .rememberme{
+        margin-top: 1.5rem;
+        margin-bottom: 0;
+        align-items: center;
+    }
+
+    .rememberme label{
+        font-size: 1rem;
+    }
+
+    button{
+        width: 60vw;
+    }
+
+    form.register{
+        top: -224px;
+    }
+}
 
   /* lecteur musique */
   *:focus
