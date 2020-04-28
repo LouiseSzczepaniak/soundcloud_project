@@ -161,6 +161,27 @@ function pauseEgaliseur(){
 
 }
 
+function playUpload(){
+    for(let i=0; i <20; i++){
+        if(i === currIndex){
+            $("#playUpload"+currIndex).removeClass("affichElement").addClass("affichPasElement");
+            $("#pauseUpload"+currIndex).removeClass("affichePasElement").add("affichElement");
+        } else {
+            $("#playUpload"+i).removeClass("affichPasElement").addClass("affichElement");
+            $("#pauseUpload"+i).removeClass("afficheElement").add("affichPasElement");
+        }
+    }
+}
+
+function pauseUpload(){
+
+
+    for(let i=0; i <20; i++){
+        $("#playUpload"+i).removeClass("affichPasElement").addClass("affichElement");
+        $("#pauseUpload"+i).removeClass("afficheElement").add("affichPasElement");
+    }
+}
+
 var albums = ['Dawn'];
 var trackNames = ['Skylike - Dawn'];
 var trackUrl = ['https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/2.mp3'];
@@ -229,6 +250,7 @@ function selectTrack(flag)
             playerTrack.addClass('active');
             albumArt.addClass('active');
             playEgaliseur();
+            playUpload();
 
 
             clearInterval(buffInterval);
@@ -265,6 +287,7 @@ function playPause()
             playerTrack.addClass('active');
             albumArt.addClass('active');
             playEgaliseur();
+            playUpload();
             checkBuffering();
             i.attr('class','fas fa-pause');
             audio.play();
@@ -274,6 +297,7 @@ function playPause()
             playerTrack.removeClass('active');
             albumArt.removeClass('active');
             pauseEgaliseur();
+            pauseUpload();
             clearInterval(buffInterval);
             albumArt.removeClass('buffering');
             i.attr('class','fas fa-play');
@@ -426,8 +450,8 @@ function initPlayer()
 
     $(audio).on('timeupdate',updateCurrTime);
 
-    playPreviousTrackButton.on('click',function(){ pauseEgaliseur(); selectTrack(-1);} );
-    playNextTrackButton.on('click',function(){ pauseEgaliseur(); selectTrack(1);});
+    playPreviousTrackButton.on('click',function(){ pauseEgaliseur(); pauseUpload(); selectTrack(-1);} );
+    playNextTrackButton.on('click',function(){ pauseEgaliseur(); pauseUpload(); selectTrack(1);});
 }
 
 $(document).ready(function() {
@@ -441,6 +465,7 @@ $(document).ready(function() {
             if(i!= currIndex){
                 currIndex = i;
                 pauseEgaliseur();
+                pauseUpload();
             }
         }
         currIndex = $(this).attr("data-nb") - 1;

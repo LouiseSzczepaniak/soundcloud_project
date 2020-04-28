@@ -240,14 +240,14 @@ body{
     font-size: 2em;
     text-transform: uppercase;
     color: white;
-    margin-top: 10px;
+    margin-top: 1rem;
 }
 
 .formulaire_recherche{
     width: 120%;
     border-radius: 20px;
     border: none;
-    padding: 10px 15px;
+    padding: 1rem 1.5rem;
     font-size: 1.5em;
 }
 
@@ -359,6 +359,73 @@ body{
 
 svg{
     width: 40%;
+}
+
+@media screen and (max-width: 700px){
+    .banniere_accueil{
+        height: 18vh;
+    }
+
+    .formulaire_recherche{
+        font-size: 0.7rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .banniere_ou{
+        font-size: 0.7rem;
+    }
+
+    .nouvelle_chanson{
+        font-size: 0.7rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .titre_section{
+        font-size: 1.6rem;
+        width: 70vw;
+        margin-top: 3vh;
+    }
+
+    .ensemble_musics{
+        width: 90vw;
+    }
+
+    .ensemble_musics > div{
+        width: 30vw;
+    }
+
+    .titre_musique{
+        font-size: 0.8rem;
+    }
+
+    .style_musique{
+        margin-top: 0;
+    }
+
+    .style_musique, .psn_upload{
+        font-size: 0.6rem;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .banniere_accueil {
+        flex-direction: column;
+    }
+
+    .formulaire_recherche{
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    .banniere_ou{
+        margin-top: 0;
+    }
+
+    .titre_section{
+        text-align: center;
+    }
 }
 
 /************************/
@@ -1776,11 +1843,11 @@ html.remodal-is-locked {
 
   .croix {
     background-image: url('../img/croix.svg');
-    width: 1.5vw;
+    width: 70%;
     height: 1.5vw;
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: right;
     margin: auto;
   }
 
@@ -1791,9 +1858,27 @@ html.remodal-is-locked {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    margin: auto;
-    margin-bottom: 3vh;
+    margin: auto auto 2vh auto;
   }
+
+.pause2 {
+    background-image: url('../img/pause2.svg');
+    width: 1.5vw;
+    height: 1.5vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: auto auto 2vh auto;
+}
+
+.affichElement{
+    display: block;
+}
+
+.affichPasElement{
+    display: none;
+}
+
 
 .img-music-playlist {
     margin:auto;

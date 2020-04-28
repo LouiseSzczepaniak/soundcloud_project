@@ -5,7 +5,8 @@
     <meta name="csrf-token" content="{{ csrf_token() }}" />
     <title> LISTEN & UPLOAD </title>
     <link type="text/css" rel="stylesheet" href="/css/style.css"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <script src="/js/jquery.js"></script>
 
     <script src="/js/popup.js"></script>
