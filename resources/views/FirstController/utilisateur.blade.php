@@ -70,16 +70,19 @@
                 </div>
 
                 <div class="chansons_uploadees" id="chansons_uploadees">
-                    
+                <div class="ensemble_musics">
                     @foreach($utilisateur->chansons as $c)
-                        <div class="ensemble_musics">
+                        
+                        <div>
                             @if(Auth::id() == $utilisateur->id)
-                                <a href="/chanson/delete/{{$c->id}}"> <div class="croix"></div> </a>
+                               <a href="/chanson/delete/{{$c->id}}"> <div class="croix"></div> </a>
                             @endif
                             @include("FirstController._chansonsuploadees")
-                        </div>
+                            </div>
+                        
 
                     @endforeach
+                    </div>
                 </div>
 
             </div>

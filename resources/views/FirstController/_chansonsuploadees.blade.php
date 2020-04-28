@@ -10,8 +10,9 @@
         @endauth
 
     </div>
-    <a href="#" data-file="{{$c->url}}" data-name="{{$c->nom}}" data-id="{{$c->id}}" class="chanson lienmusic">
-        play
+    
+    <a href="#" data-file="{{$c->url}}" data-name="{{$c->nom}}" data-id="{{$c->id}}">
+        <div class="play2"></div>
     </a>
     <p class="titre_musique"> {{$c->nom}}</p>
     <p class="style_musique"> {{$c->style}}</p>
