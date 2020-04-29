@@ -17,6 +17,11 @@
         <a href="/">
             <div class="logo"></div>
         </a>
+
+        @guest
+            <div class='login' id='login'></div>
+        @endguest
+
         @auth
         <div class="icons">
             <a href="/utilisateur/{{Auth::id()}}"><div class="myaccount"></div></a>
@@ -33,9 +38,7 @@
 <body>
         @guest
         <div id='popup'>
-            <div class="container">
-                <div class='login' id='login'></div>
-            </div>
+
 
             <div class="overlay">
             </div>

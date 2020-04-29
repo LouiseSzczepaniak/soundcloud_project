@@ -72,12 +72,97 @@ body{
     transition: all 0.5s ease;
 }
 
+.login{
+    background-image: url('../img/login.png');
+    z-index:16;
+    margin-right: 2vw;
+    width: 2.9vw;
+    height: 4vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.myaccount {
+    background-image: url('../img/myaccount.svg');
+    width: 4vw;
+    height: 4vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 3vw;
+}
+
+.logout{
+    background-image: url("../img/logout.svg");
+    width: 4vw;
+    height: 4vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 3vw;
+    cursor: pointer;
+}
+
+.icons {
+    display:flex;
+}
+
 .small-logo {
     height: 4vh;
 }
 
+.small-login {
+    height: 3vh!important;
+}
+
+@media screen and (max-width: 1000px) {
+    .logo{
+        width: 18vw;
+    }
+
+    .myaccount, .logout, .login{
+        width: 6vw;
+        height: 6vh;
+    }
+
+    .myaccount{
+        margin-right: 5vw;
+    }
+
+    .small-icon{
+        height: 3.5vh;
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+    .menu_principal{
+        height: 8vh;
+    }
+
+    .logo{
+        width: 20vw;
+    }
+
+    .myaccount, .logout, .login{
+        width: 8vw;
+        height: 8vh;
+    }
+
+    .myaccount{
+        margin-right: 7vw;
+    }
+
+    .logout{
+        margin-right: 4vw;
+    }
+}
+
 /************************/
-/*Pop up connexion / deconnexion*/
+/*****Pop up connexion***/
 /************************/
 
 .modal{
@@ -87,52 +172,6 @@ body{
     margin-right: auto;
     position: absolute;
     z-index: 222;
-}
-.logout{
-    background-image: url("../img/logout.svg");
-    width: 2.5vw;
-    height: 2.5vw;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-right: 3vw;
-    cursor: pointer;
-}
-
-.myaccount {
-    background-image: url('../img/myaccount.svg');
-    width: 2.5vw;
-    height: 2.5vw;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-right: 3vw;
-
-}
-
-.icons {
-    display:flex;
-
-}
-
-.login{
-    background-image: url('../img/login.png');
-    position: fixed;
-    z-index:16;
-    right: 2vw;
-    top: 2vh;
-    width: 5vw;
-    height: 5vh;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    cursor: pointer;
-    transition: all 0.5s ease;
-
-}
-
-.small-login {
-    height: 3vh!important;
 }
 
 
@@ -206,6 +245,16 @@ body{
 
 .like {
     background-image: url('../img/like.svg');
+    width: 2vw;
+    height: 2vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: auto;
+}
+
+.like_hover {
+    background-image: url('../img/like_hover.svg');
     width: 2vw;
     height: 2vw;
     background-size: contain;
@@ -379,6 +428,8 @@ svg{
 
     .titre_section{
         text-align: center;
+        font-size: 2.5rem;
+        margin-top: 3vh;
     }
 
 
@@ -419,6 +470,7 @@ svg{
 @media screen and (max-width: 700px){
     .banniere_accueil{
         height: 18vh;
+        margin-top: 8vh;
     }
 
     .formulaire_recherche{
@@ -438,7 +490,6 @@ svg{
     .titre_section{
         font-size: 1.6rem;
         width: 70vw;
-        margin-top: 3vh;
     }
 
     .ensemble_musics{
@@ -1098,17 +1149,11 @@ svg{
 
 
 /* Louise */
-.like_hover {
-    background-image: url('../img/like_hover.svg');
-    width: 2vw;
-    height: 2vw;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin: auto;
-}
 
-/* popup */
+
+/************************/
+/*********Pop-up*********/
+/************************/
 
 #popup{
 }
@@ -1534,7 +1579,10 @@ html, body, * {
     }
 }
 
-  /* lecteur musique */
+
+/************************/
+/********Player**********/
+/************************/
   *:focus
 {
     outline: none;
@@ -2251,7 +2299,9 @@ html.remodal-is-locked {
 
 
 
-/* UPLOAD D'UNE CHANSON */
+/************************/
+/**UPLOAD D'UNE CHANSON**/
+/************************/
 .new_chanson {
     width: 80vw;
     margin:auto;
@@ -2292,9 +2342,11 @@ html.remodal-is-locked {
     border: none;
     border-radius: 1rem;
     background: var(--blancClair);
+    color: white;
     padding: 0.5rem;
     margin-top: 2vh;
     font-family: "gravity";
+    font-weight: bold;
     outline: none;
 }
 
@@ -2302,7 +2354,35 @@ html.remodal-is-locked {
     height:5vh;
 }
 
-/* GLITCH 404 */
+.contenu_nouvelleChanson{
+    margin-top: 14vh;
+}
+
+@media screen and (max-width: 1000px) {
+    .new_chanson_text{
+        margin-top: 5vh;
+    }
+
+    .new_chanson_text, .new_chanson_upload, .new_chanson_style{
+        width: 40vw;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .new_chanson_text, .new_chanson_upload, .new_chanson_style{
+        width: 60vw;
+    }
+
+    .new_chanson_submit{
+        margin-top: 4vh;
+        width: 20vw;
+    }
+}
+
+/************************/
+/*******Glitch 404*******/
+/************************/
+
 .bck-error {
     background-color: var(--beigeBlanc);
     width: 100vw;
