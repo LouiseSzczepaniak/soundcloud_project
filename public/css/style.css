@@ -2517,3 +2517,62 @@ html.remodal-is-locked {
 .top {
     margin-top: -13vh;
 }
+
+@media screen and (max-width:1000px) {
+    .page_user {
+        display: block;
+    }
+
+    .infos_user {
+        width: 100vw;
+        margin-bottom: 5vh;
+
+    }
+
+    .playlists {
+        width: 100vw;
+        min-height: 130vh;
+    }
+
+    .bouton_nouvelle_playlist {
+        width: 50vw;
+    }
+
+    .ensemble_musics {
+        flex-wrap: wrap;
+        width: 100vw;
+    }
+
+    .ensemble_musics > div {
+        width: 50vw;
+    }
+
+    .titre_musique {
+        font-size: 1.5rem;
+    }
+
+    .style_musique {
+        font-size: 1rem;
+    }
+
+    .psn_upload {
+        font-size: 1rem;
+    }
+
+    .play2 {
+        width: 5vw;
+        height: 5vw;
+        margin-top: 2vh;
+    }
+
+    .croix {
+        width: 5vw;
+        height: 5vw;
+    }
+
+    .cross {
+        position: relative;
+        top: 0.7vh;
+        left: 4vw;
+    }
+}

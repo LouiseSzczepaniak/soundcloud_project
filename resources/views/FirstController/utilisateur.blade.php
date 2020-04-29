@@ -52,7 +52,7 @@
                                 @if(Auth::id() == $utilisateur->id)
                                     <div>
                                         <a href="/playlist/delete/{{$p->id}}">
-                                            <div class="croix"></div>
+                                            <div class="croix cross"></div>
                                         </a>
                                     </div>
                                 @endif
