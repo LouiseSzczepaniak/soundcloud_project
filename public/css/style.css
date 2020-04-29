@@ -633,6 +633,47 @@ svg{
     display: flex;
 }
 
+@media screen and (max-width: 1000px) {
+    .resultat_search{
+        width: 90%;
+    }
+
+    .unepersonne_search{
+        margin-bottom: 2.5vh;
+        margin-left: 1vw!important;
+    }
+
+    .search .ensemble_musics > div{
+        width: 26vw;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .title_resultSearch{
+        font-size: 1.6rem;
+    }
+
+    .title_search{
+        font-size: 1.2rem;
+    }
+
+    .name_search{
+        font-size: 1rem;
+    }
+
+    .unepersonne_search{
+        font-size: 0.8rem;
+    }
+
+    .resultat_chansons{
+        margin-top: 3vh;
+    }
+
+    .search .ensemble_musics > div{
+        width: 30vw;
+    }
+}
+
 /************************/
 /****Utilisateur page****/
 /************************/
